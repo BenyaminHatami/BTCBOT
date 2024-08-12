@@ -491,9 +491,9 @@ class Position(BaseModel):
             SideFutures.close_short.value
         remote_id = self.trader.futures_trade(coin=self.coin, quantity=self.quantity, side=side)
         self.update_position_and_create_position_action(remote_id=remote_id)
+        self.inactivate_all_sltp_orders()
         self.state = State.Inactive.value
         self.save(update_fields=['state', 'updated'])
-        self.inactivate_all_sltp_orders()
 
     def expand_position(self, quantity: Decimal):
         side = SideFutures.open_long.value if self.direction == PositionDirection.long.value else \

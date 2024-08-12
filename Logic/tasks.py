@@ -89,7 +89,7 @@ def monitoring_sltp_orders(position_id: int):
                     if inactivated and i == 0:
                         sl.change_trigger_price(new_trigger_price=price * Decimal("0.995"))
                         tp.inactivate()
-                        position -= tp.quantity
+                        position.quantity -= tp.quantity
                         position.save(update_fields=["quantity", "updated"])
                     elif inactivated and i == 1:
                         position.inactivate_all_sltp_orders()
