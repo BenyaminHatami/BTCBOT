@@ -4387,3 +4387,1313 @@ you should set broker_connection_retry_on_startup to True.
 [2024-08-11 23:18:49,433: INFO/MainProcess] mingle: searching for neighbors
 [2024-08-11 23:18:50,440: INFO/MainProcess] mingle: all alone
 [2024-08-11 23:18:50,451: INFO/MainProcess] celery@a646d974b25e ready.
+[2024-08-12 00:51:52,300: WARNING/MainProcess] /usr/local/lib/python3.12/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-08-12 00:51:52,339: INFO/MainProcess] Connected to redis://redis:6379/0
+[2024-08-12 00:51:52,340: WARNING/MainProcess] /usr/local/lib/python3.12/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-08-12 00:51:52,342: INFO/MainProcess] mingle: searching for neighbors
+[2024-08-12 00:51:53,351: INFO/MainProcess] mingle: all alone
+[2024-08-12 00:51:53,384: INFO/MainProcess] celery@a646d974b25e ready.
+[2024-08-12 00:54:44,412: INFO/MainProcess] Task Logic.tasks.monitoring_sltp_orders[743d9e23-9cb0-4297-b1aa-75a09f439208] received
+[2024-08-12 00:54:44,414: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:54:44,425: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:54:44.425771
+[2024-08-12 00:54:44,434: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 00:54:44.434620
+[2024-08-12 00:54:45,162: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424085877,"data":{"clientOid":"1206693554391859200","orderId":"1206693554391859201"}}
+[2024-08-12 00:54:45,162: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:54:45,162: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:54:45,167: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:54:45.167520
+[2024-08-12 00:54:45,837: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424086506,"data":{"clientOid":"1206693558078648320","orderId":"1206693558078648321"}}
+[2024-08-12 00:54:45,837: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:54:45,838: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:54:45,839: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:54:45.839753
+[2024-08-12 00:54:46,656: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424087259,"data":{"clientOid":"1206693561476038656","orderId":"1206693561476038657"}}
+[2024-08-12 00:54:46,657: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:54:46,657: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:54:51,657: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:54:51,660: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:54:51.660101
+[2024-08-12 00:54:51,665: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 00:54:51.665033
+[2024-08-12 00:54:52,494: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424093179,"data":{"clientOid":"1206693554391859200","orderId":"1206693554391859201"}}
+[2024-08-12 00:54:52,494: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:54:52,494: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:54:52,497: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:54:52.497641
+[2024-08-12 00:54:53,418: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424093850,"data":{"clientOid":"1206693558078648320","orderId":"1206693558078648321"}}
+[2024-08-12 00:54:53,418: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:54:53,418: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:54:53,420: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:54:53.420690
+[2024-08-12 00:54:55,053: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424095589,"data":{"clientOid":"1206693561476038656","orderId":"1206693561476038657"}}
+[2024-08-12 00:54:55,053: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:54:55,054: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:55:00,054: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:55:00,058: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:55:00.058446
+[2024-08-12 00:55:00,065: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 00:55:00.065261
+[2024-08-12 00:55:00,892: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424101494,"data":{"clientOid":"1206693554391859200","orderId":"1206693554391859201"}}
+[2024-08-12 00:55:00,892: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:55:00,892: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:55:00,899: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:55:00.899894
+[2024-08-12 00:55:01,518: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424102233,"data":{"clientOid":"1206693558078648320","orderId":"1206693558078648321"}}
+[2024-08-12 00:55:01,519: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:55:01,519: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:55:01,523: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:55:01.523201
+[2024-08-12 00:55:02,203: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424102912,"data":{"clientOid":"1206693561476038656","orderId":"1206693561476038657"}}
+[2024-08-12 00:55:02,204: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:55:02,204: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:55:07,204: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:55:07,207: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:55:07.207355
+[2024-08-12 00:55:07,212: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 00:55:07.212267
+[2024-08-12 00:55:08,805: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424109518,"data":{"clientOid":"1206693554391859200","orderId":"1206693554391859201"}}
+[2024-08-12 00:55:08,805: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:55:08,805: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:55:08,808: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:55:08.808678
+[2024-08-12 00:55:09,497: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424110208,"data":{"clientOid":"1206693558078648320","orderId":"1206693558078648321"}}
+[2024-08-12 00:55:09,498: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:55:09,498: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:55:09,502: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:55:09.502694
+[2024-08-12 00:55:10,214: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424110844,"data":{"clientOid":"1206693561476038656","orderId":"1206693561476038657"}}
+[2024-08-12 00:55:10,214: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:55:10,215: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:55:15,215: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:55:15,218: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:55:15.218679
+[2024-08-12 00:55:15,223: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 00:55:15.223499
+[2024-08-12 00:55:16,216: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424116741,"data":{"clientOid":"1206693554391859200","orderId":"1206693554391859201"}}
+[2024-08-12 00:55:16,216: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:55:16,217: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:55:16,221: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:55:16.221398
+[2024-08-12 00:55:16,967: WARNING/ForkPoolWorker-7] {"code":"43020","msg":"Stop profit and stop loss order does not exist","requestTime":1723424117561,"data":null}
+[2024-08-12 00:55:16,967: WARNING/ForkPoolWorker-7] response_code is 43020
+[2024-08-12 00:55:16,967: WARNING/ForkPoolWorker-7] Changed
+[2024-08-12 00:55:17,888: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424118460,"data":{"clientOid":"1206693554391859200","orderId":"1206693554391859201"}}
+[2024-08-12 00:55:17,888: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:55:17,905: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:55:17.905006
+[2024-08-12 00:55:19,183: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424119903,"data":{"clientOid":"1206693561476038656","orderId":"1206693561476038657"}}
+[2024-08-12 00:55:19,183: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:55:19,183: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:55:24,184: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:55:24,186: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:55:24.186932
+[2024-08-12 00:55:24,192: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 00:55:24.192018
+[2024-08-12 00:55:24,955: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424125545,"data":{"clientOid":"1206693554391859200","orderId":"1206693554391859201"}}
+[2024-08-12 00:55:24,955: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:55:24,955: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:55:24,960: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:55:24.960390
+[2024-08-12 00:55:25,592: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424126288,"data":{"clientOid":"1206693561476038656","orderId":"1206693561476038657"}}
+[2024-08-12 00:55:25,592: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:55:25,593: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:55:30,593: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:55:30,600: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:55:30.600493
+[2024-08-12 00:55:30,613: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 00:55:30.613436
+[2024-08-12 00:55:31,594: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424132303,"data":{"clientOid":"1206693554391859200","orderId":"1206693554391859201"}}
+[2024-08-12 00:55:31,594: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:55:31,595: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:55:31,603: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:55:31.603060
+[2024-08-12 00:55:32,239: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424132941,"data":{"clientOid":"1206693561476038656","orderId":"1206693561476038657"}}
+[2024-08-12 00:55:32,239: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:55:32,240: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:55:37,240: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:55:37,243: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:55:37.243229
+[2024-08-12 00:55:37,248: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 00:55:37.248759
+[2024-08-12 00:55:38,779: WARNING/ForkPoolWorker-7] {"code":"43020","msg":"Stop profit and stop loss order does not exist","requestTime":1723424139339,"data":null}
+[2024-08-12 00:55:38,780: WARNING/ForkPoolWorker-7] response_code is 43020
+[2024-08-12 00:55:38,781: WARNING/ForkPoolWorker-7] Changed
+[2024-08-12 00:55:38,798: INFO/ForkPoolWorker-7] Task Logic.tasks.monitoring_sltp_orders[743d9e23-9cb0-4297-b1aa-75a09f439208] succeeded in 54.38428048800051s: None
+[2024-08-12 00:55:42,058: INFO/MainProcess] Task Logic.tasks.monitoring_sltp_orders[6cd7f8b4-3ec6-4e39-ab41-15c958ad7116] received
+[2024-08-12 00:55:42,059: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:55:42,066: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:55:42.066255
+[2024-08-12 00:55:42,075: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 00:55:42.075063
+[2024-08-12 00:55:42,877: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424143458,"data":{"clientOid":"1206693796872953856","orderId":"1206693796872953857"}}
+[2024-08-12 00:55:42,877: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:55:42,878: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:55:42,882: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:55:42.882840
+[2024-08-12 00:55:43,591: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424144224,"data":{"clientOid":"1206693800572334080","orderId":"1206693800572334081"}}
+[2024-08-12 00:55:43,591: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:55:43,591: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:55:43,593: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:55:43.593174
+[2024-08-12 00:55:44,500: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424145202,"data":{"clientOid":"1206693803705475072","orderId":"1206693803705475073"}}
+[2024-08-12 00:55:44,500: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:55:44,500: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:55:49,500: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:55:49,503: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:55:49.503506
+[2024-08-12 00:55:49,508: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 00:55:49.508846
+[2024-08-12 00:55:50,250: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424150933,"data":{"clientOid":"1206693796872953856","orderId":"1206693796872953857"}}
+[2024-08-12 00:55:50,250: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:55:50,250: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:55:50,253: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:55:50.253848
+[2024-08-12 00:55:51,169: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424151664,"data":{"clientOid":"1206693800572334080","orderId":"1206693800572334081"}}
+[2024-08-12 00:55:51,169: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:55:51,169: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:55:51,171: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:55:51.171639
+[2024-08-12 00:55:51,989: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424152511,"data":{"clientOid":"1206693803705475072","orderId":"1206693803705475073"}}
+[2024-08-12 00:55:51,990: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:55:51,990: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:55:56,991: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:55:56,996: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:55:56.996115
+[2024-08-12 00:55:57,007: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:55:57.007626
+[2024-08-12 00:55:57,715: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424158426,"data":{"clientOid":"1206693800572334080","orderId":"1206693800572334081"}}
+[2024-08-12 00:55:57,715: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:55:57,715: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:55:57,717: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:55:57.717735
+[2024-08-12 00:55:58,645: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424159144,"data":{"clientOid":"1206693803705475072","orderId":"1206693803705475073"}}
+[2024-08-12 00:55:58,646: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:55:58,646: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:56:03,646: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:56:03,649: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:56:03.649674
+[2024-08-12 00:56:03,655: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 00:56:03.655035
+[2024-08-12 00:56:04,855: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424165371,"data":{"clientOid":"1206693876329848835","orderId":"1206693876334043136"}}
+[2024-08-12 00:56:04,855: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:56:04,855: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:56:04,859: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:56:04.859017
+[2024-08-12 00:56:06,323: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424166958,"data":{"clientOid":"1206693879337164801","orderId":"1206693879337164802"}}
+[2024-08-12 00:56:06,324: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:56:06,324: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:56:06,326: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:56:06.326179
+[2024-08-12 00:56:07,145: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424167729,"data":{"clientOid":"1206693882419982336","orderId":"1206693882419982337"}}
+[2024-08-12 00:56:07,145: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:56:07,146: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:56:12,146: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:56:12,150: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:56:12.150397
+[2024-08-12 00:56:12,157: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 00:56:12.157475
+[2024-08-12 00:56:13,186: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424173503,"data":{"clientOid":"1206693876329848835","orderId":"1206693876334043136"}}
+[2024-08-12 00:56:13,187: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:56:13,187: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:56:13,192: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:56:13.192217
+[2024-08-12 00:56:14,209: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424174701,"data":{"clientOid":"1206693879337164801","orderId":"1206693879337164802"}}
+[2024-08-12 00:56:14,209: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:56:14,209: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:56:14,211: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:56:14.211213
+[2024-08-12 00:56:15,131: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424175684,"data":{"clientOid":"1206693882419982336","orderId":"1206693882419982337"}}
+[2024-08-12 00:56:15,131: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:56:15,131: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:56:20,131: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:56:20,139: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:56:20.139025
+[2024-08-12 00:56:20,152: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 00:56:20.152819
+[2024-08-12 00:56:21,786: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424182330,"data":{"clientOid":"1206693876329848835","orderId":"1206693876334043136"}}
+[2024-08-12 00:56:21,787: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:56:21,787: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:56:21,790: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:56:21.790170
+[2024-08-12 00:56:22,810: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424183398,"data":{"clientOid":"1206693879337164801","orderId":"1206693879337164802"}}
+[2024-08-12 00:56:22,811: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:56:22,811: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:56:22,812: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:56:22.812908
+[2024-08-12 00:56:23,529: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424184151,"data":{"clientOid":"1206693882419982336","orderId":"1206693882419982337"}}
+[2024-08-12 00:56:23,529: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:56:23,530: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:56:28,530: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:56:28,533: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:56:28.533298
+[2024-08-12 00:56:28,538: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 00:56:28.538029
+[2024-08-12 00:56:29,205: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424189870,"data":{"clientOid":"1206693876329848835","orderId":"1206693876334043136"}}
+[2024-08-12 00:56:29,205: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:56:29,205: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:56:29,209: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:56:29.209493
+[2024-08-12 00:56:29,881: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424190536,"data":{"clientOid":"1206693879337164801","orderId":"1206693879337164802"}}
+[2024-08-12 00:56:29,881: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:56:29,882: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:56:29,883: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:56:29.883663
+[2024-08-12 00:56:30,695: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424191271,"data":{"clientOid":"1206693882419982336","orderId":"1206693882419982337"}}
+[2024-08-12 00:56:30,695: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:56:30,695: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:56:35,696: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:56:35,701: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:56:35.701166
+[2024-08-12 00:56:35,713: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 00:56:35.713893
+[2024-08-12 00:56:36,738: WARNING/ForkPoolWorker-7] {"code":"43020","msg":"Stop profit and stop loss order does not exist","requestTime":1723424197262,"data":null}
+[2024-08-12 00:56:36,738: WARNING/ForkPoolWorker-7] response_code is 43020
+[2024-08-12 00:56:36,739: WARNING/ForkPoolWorker-7] Changed
+[2024-08-12 00:56:36,766: INFO/ForkPoolWorker-7] Task Logic.tasks.monitoring_sltp_orders[6cd7f8b4-3ec6-4e39-ab41-15c958ad7116] succeeded in 54.707466558000306s: None
+[2024-08-12 00:57:23,294: WARNING/MainProcess] /usr/local/lib/python3.12/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-08-12 00:57:23,300: INFO/MainProcess] Connected to redis://redis:6379/0
+[2024-08-12 00:57:23,301: WARNING/MainProcess] /usr/local/lib/python3.12/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-08-12 00:57:23,305: INFO/MainProcess] mingle: searching for neighbors
+[2024-08-12 00:57:24,312: INFO/MainProcess] mingle: all alone
+[2024-08-12 00:57:24,322: INFO/MainProcess] celery@a646d974b25e ready.
+[2024-08-12 00:57:45,963: INFO/MainProcess] Task Logic.tasks.monitoring_sltp_orders[938c1fa9-6c52-469a-b10c-004a1a1f2d72] received
+[2024-08-12 00:57:45,964: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:57:45,975: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:57:45.975118
+[2024-08-12 00:57:45,982: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 00:57:45.982707
+[2024-08-12 00:57:46,881: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424267471,"data":{"clientOid":"1206694316375261184","orderId":"1206694316375261185"}}
+[2024-08-12 00:57:46,881: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:57:46,881: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:57:46,885: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:57:46.885201
+[2024-08-12 00:57:47,604: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424268240,"data":{"clientOid":"1206694319781027840","orderId":"1206694319781027841"}}
+[2024-08-12 00:57:47,605: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:57:47,605: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:57:47,610: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:57:47.610282
+[2024-08-12 00:57:48,416: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424269018,"data":{"clientOid":"1206694322494742528","orderId":"1206694322494742529"}}
+[2024-08-12 00:57:48,417: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:57:48,417: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:57:53,417: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:57:53,420: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:57:53.420270
+[2024-08-12 00:57:53,425: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 00:57:53.425097
+[2024-08-12 00:57:54,256: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424274951,"data":{"clientOid":"1206694316375261184","orderId":"1206694316375261185"}}
+[2024-08-12 00:57:54,256: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:57:54,256: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:57:54,259: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:57:54.259752
+[2024-08-12 00:57:54,970: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424275668,"data":{"clientOid":"1206694319781027840","orderId":"1206694319781027841"}}
+[2024-08-12 00:57:54,970: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:57:54,971: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:57:54,972: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:57:54.972595
+[2024-08-12 00:57:55,801: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424276489,"data":{"clientOid":"1206694322494742528","orderId":"1206694322494742529"}}
+[2024-08-12 00:57:55,801: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:57:55,801: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:58:00,801: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:58:00,804: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:58:00.804578
+[2024-08-12 00:58:00,809: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 00:58:00.809056
+[2024-08-12 00:58:01,628: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424282173,"data":{"clientOid":"1206694316375261184","orderId":"1206694316375261185"}}
+[2024-08-12 00:58:01,628: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:58:01,629: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:58:01,637: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:58:01.637090
+[2024-08-12 00:58:02,447: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424283034,"data":{"clientOid":"1206694319781027840","orderId":"1206694319781027841"}}
+[2024-08-12 00:58:02,447: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:58:02,448: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:58:02,452: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:58:02.452729
+[2024-08-12 00:58:03,265: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424283788,"data":{"clientOid":"1206694322494742528","orderId":"1206694322494742529"}}
+[2024-08-12 00:58:03,265: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:58:03,266: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:58:08,266: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:58:08,269: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:58:08.269032
+[2024-08-12 00:58:08,274: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 00:58:08.274238
+[2024-08-12 00:58:09,068: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424289602,"data":{"clientOid":"1206694316375261184","orderId":"1206694316375261185"}}
+[2024-08-12 00:58:09,068: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:58:09,068: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:58:09,071: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:58:09.071929
+[2024-08-12 00:58:09,720: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424290406,"data":{"clientOid":"1206694319781027840","orderId":"1206694319781027841"}}
+[2024-08-12 00:58:09,720: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:58:09,720: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:58:09,722: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:58:09.722223
+[2024-08-12 00:58:10,740: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424291333,"data":{"clientOid":"1206694322494742528","orderId":"1206694322494742529"}}
+[2024-08-12 00:58:10,740: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:58:10,740: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:58:15,741: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:58:15,748: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:58:15.748314
+[2024-08-12 00:58:15,762: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 00:58:15.762195
+[2024-08-12 00:58:16,451: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424297167,"data":{"clientOid":"1206694316375261184","orderId":"1206694316375261185"}}
+[2024-08-12 00:58:16,451: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:58:16,452: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:58:16,460: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:58:16.460346
+[2024-08-12 00:58:17,299: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424297883,"data":{"clientOid":"1206694319781027840","orderId":"1206694319781027841"}}
+[2024-08-12 00:58:17,299: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:58:17,300: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:58:17,302: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:58:17.302740
+[2024-08-12 00:58:18,113: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424298701,"data":{"clientOid":"1206694322494742528","orderId":"1206694322494742529"}}
+[2024-08-12 00:58:18,113: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:58:18,113: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:58:23,113: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:58:23,120: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:58:23.120797
+[2024-08-12 00:58:23,134: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 00:58:23.134080
+[2024-08-12 00:58:23,953: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424304467,"data":{"clientOid":"1206694316375261184","orderId":"1206694316375261185"}}
+[2024-08-12 00:58:23,953: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:58:23,954: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:58:23,958: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:58:23.958233
+[2024-08-12 00:58:24,668: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424305284,"data":{"clientOid":"1206694319781027840","orderId":"1206694319781027841"}}
+[2024-08-12 00:58:24,669: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:58:24,669: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:58:24,673: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:58:24.673554
+[2024-08-12 00:58:25,485: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424306176,"data":{"clientOid":"1206694322494742528","orderId":"1206694322494742529"}}
+[2024-08-12 00:58:25,486: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:58:25,487: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:58:30,487: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:58:30,490: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:58:30.490227
+[2024-08-12 00:58:30,715: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 00:58:30.715015
+[2024-08-12 00:58:31,733: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424312239,"data":{"clientOid":"1206694316375261184","orderId":"1206694316375261185"}}
+[2024-08-12 00:58:31,734: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:58:31,734: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:58:31,738: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:58:31.738722
+[2024-08-12 00:58:32,824: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424313383,"data":{"clientOid":"1206694319781027840","orderId":"1206694319781027841"}}
+[2024-08-12 00:58:32,824: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:58:32,825: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:58:32,829: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:58:32.829531
+[2024-08-12 00:58:33,476: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424314158,"data":{"clientOid":"1206694322494742528","orderId":"1206694322494742529"}}
+[2024-08-12 00:58:33,476: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:58:33,476: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:58:38,476: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:58:38,480: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:58:38.479972
+[2024-08-12 00:58:38,484: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 00:58:38.484749
+[2024-08-12 00:58:39,926: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424320485,"data":{"clientOid":"1206694316375261184","orderId":"1206694316375261185"}}
+[2024-08-12 00:58:39,926: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:58:39,926: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:58:39,929: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:58:39.929438
+[2024-08-12 00:58:40,545: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424321253,"data":{"clientOid":"1206694319781027840","orderId":"1206694319781027841"}}
+[2024-08-12 00:58:40,545: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:58:40,545: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:58:40,547: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:58:40.547051
+[2024-08-12 00:58:41,265: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424321975,"data":{"clientOid":"1206694322494742528","orderId":"1206694322494742529"}}
+[2024-08-12 00:58:41,265: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:58:41,266: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:58:46,267: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:58:46,274: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:58:46.274762
+[2024-08-12 00:58:46,282: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 00:58:46.282901
+[2024-08-12 00:58:47,203: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424327908,"data":{"clientOid":"1206694316375261184","orderId":"1206694316375261185"}}
+[2024-08-12 00:58:47,203: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:58:47,203: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:58:47,208: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:58:47.208391
+[2024-08-12 00:58:48,116: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424328546,"data":{"clientOid":"1206694319781027840","orderId":"1206694319781027841"}}
+[2024-08-12 00:58:48,116: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:58:48,116: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:58:48,118: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:58:48.118013
+[2024-08-12 00:58:48,742: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424329452,"data":{"clientOid":"1206694322494742528","orderId":"1206694322494742529"}}
+[2024-08-12 00:58:48,742: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:58:48,744: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:58:53,744: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:58:53,750: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:58:53.750306
+[2024-08-12 00:58:53,763: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 00:58:53.763557
+[2024-08-12 00:58:54,772: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424335375,"data":{"clientOid":"1206694316375261184","orderId":"1206694316375261185"}}
+[2024-08-12 00:58:54,772: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:58:54,772: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:58:54,775: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:58:54.775596
+[2024-08-12 00:58:55,504: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424336211,"data":{"clientOid":"1206694319781027840","orderId":"1206694319781027841"}}
+[2024-08-12 00:58:55,504: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:58:55,505: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:58:55,509: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:58:55.509642
+[2024-08-12 00:58:56,174: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424336892,"data":{"clientOid":"1206694322494742528","orderId":"1206694322494742529"}}
+[2024-08-12 00:58:56,174: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:58:56,174: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:59:01,175: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:59:01,182: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:59:01.182549
+[2024-08-12 00:59:01,196: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 00:59:01.196362
+[2024-08-12 00:59:01,942: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424342538,"data":{"clientOid":"1206694316375261184","orderId":"1206694316375261185"}}
+[2024-08-12 00:59:01,942: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:59:01,943: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:59:01,948: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:59:01.948824
+[2024-08-12 00:59:02,567: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424343271,"data":{"clientOid":"1206694319781027840","orderId":"1206694319781027841"}}
+[2024-08-12 00:59:02,567: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:59:02,567: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:59:02,569: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:59:02.569244
+[2024-08-12 00:59:03,579: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424344162,"data":{"clientOid":"1206694322494742528","orderId":"1206694322494742529"}}
+[2024-08-12 00:59:03,579: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:59:03,579: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:59:08,580: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:59:08,582: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:59:08.582852
+[2024-08-12 00:59:08,588: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 00:59:08.588001
+[2024-08-12 00:59:09,519: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424350178,"data":{"clientOid":"1206694316375261184","orderId":"1206694316375261185"}}
+[2024-08-12 00:59:09,519: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:59:09,519: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:59:09,525: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:59:09.525252
+[2024-08-12 00:59:10,237: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424350924,"data":{"clientOid":"1206694319781027840","orderId":"1206694319781027841"}}
+[2024-08-12 00:59:10,237: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:59:10,237: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:59:10,239: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:59:10.239333
+[2024-08-12 00:59:11,569: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424351658,"data":{"clientOid":"1206694322494742528","orderId":"1206694322494742529"}}
+[2024-08-12 00:59:11,569: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:59:11,570: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:59:16,571: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:59:16,573: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:59:16.573823
+[2024-08-12 00:59:16,578: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 00:59:16.578675
+[2024-08-12 00:59:17,506: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424358095,"data":{"clientOid":"1206694316375261184","orderId":"1206694316375261185"}}
+[2024-08-12 00:59:17,506: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:59:17,507: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:59:17,511: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:59:17.511213
+[2024-08-12 00:59:18,265: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424358979,"data":{"clientOid":"1206694319781027840","orderId":"1206694319781027841"}}
+[2024-08-12 00:59:18,265: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:59:18,265: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:59:18,268: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:59:18.268282
+[2024-08-12 00:59:19,042: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424359627,"data":{"clientOid":"1206694322494742528","orderId":"1206694322494742529"}}
+[2024-08-12 00:59:19,042: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:59:19,042: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:59:24,042: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:59:24,045: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:59:24.045315
+[2024-08-12 00:59:24,050: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 00:59:24.050717
+[2024-08-12 00:59:24,787: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424365460,"data":{"clientOid":"1206694316375261184","orderId":"1206694316375261185"}}
+[2024-08-12 00:59:24,787: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:59:24,787: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:59:24,790: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:59:24.790697
+[2024-08-12 00:59:25,800: WARNING/ForkPoolWorker-7] {"code":"43020","msg":"Stop profit and stop loss order does not exist","requestTime":1723424366400,"data":null}
+[2024-08-12 00:59:25,800: WARNING/ForkPoolWorker-7] response_code is 43020
+[2024-08-12 00:59:25,800: WARNING/ForkPoolWorker-7] Changed
+[2024-08-12 00:59:26,557: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424367207,"data":{"clientOid":"1206694316375261184","orderId":"1206694316375261185"}}
+[2024-08-12 00:59:26,558: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:59:26,582: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:59:26.582857
+[2024-08-12 00:59:27,236: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424367915,"data":{"clientOid":"1206694322494742528","orderId":"1206694322494742529"}}
+[2024-08-12 00:59:27,236: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:59:27,237: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:59:32,237: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:59:32,245: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:59:32.244997
+[2024-08-12 00:59:32,258: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 00:59:32.258816
+[2024-08-12 00:59:33,073: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424373671,"data":{"clientOid":"1206694316375261184","orderId":"1206694316375261185"}}
+[2024-08-12 00:59:33,073: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:59:33,074: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:59:33,079: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:59:33.079305
+[2024-08-12 00:59:33,993: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424374478,"data":{"clientOid":"1206694322494742528","orderId":"1206694322494742529"}}
+[2024-08-12 00:59:33,993: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:59:33,993: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:59:38,994: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:59:39,004: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:59:39.004056
+[2024-08-12 00:59:39,022: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 00:59:39.022195
+[2024-08-12 00:59:39,930: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424380354,"data":{"clientOid":"1206694316375261184","orderId":"1206694316375261185"}}
+[2024-08-12 00:59:39,930: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:59:39,931: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:59:39,934: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:59:39.934951
+[2024-08-12 00:59:40,750: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424381273,"data":{"clientOid":"1206694322494742528","orderId":"1206694322494742529"}}
+[2024-08-12 00:59:40,750: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:59:40,751: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:59:45,751: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:59:45,756: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:59:45.756285
+[2024-08-12 00:59:45,761: INFO/ForkPoolWorker-7] Task Logic.tasks.monitoring_sltp_orders[938c1fa9-6c52-469a-b10c-004a1a1f2d72] succeeded in 119.79689074099952s: None
+[2024-08-12 00:59:48,467: INFO/MainProcess] Task Logic.tasks.monitoring_sltp_orders[3b97d50a-b333-4e6d-b22c-3ce360e5e3de] received
+[2024-08-12 00:59:48,468: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:59:48,473: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:59:48.473465
+[2024-08-12 00:59:48,479: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 00:59:48.478977
+[2024-08-12 00:59:49,155: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424389858,"data":{"clientOid":"1206694830911504384","orderId":"1206694830911504385"}}
+[2024-08-12 00:59:49,155: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:59:49,156: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:59:49,164: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:59:49.164673
+[2024-08-12 00:59:50,458: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424391172,"data":{"clientOid":"1206694834204033024","orderId":"1206694834204033025"}}
+[2024-08-12 00:59:50,458: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:59:50,458: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:59:50,460: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:59:50.460710
+[2024-08-12 00:59:51,298: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424391907,"data":{"clientOid":"1206694837219729408","orderId":"1206694837219729409"}}
+[2024-08-12 00:59:51,298: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:59:51,298: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:59:56,299: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 00:59:56,306: WARNING/ForkPoolWorker-7] Time is 2024-08-12 00:59:56.306345
+[2024-08-12 00:59:56,320: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 00:59:56.320646
+[2024-08-12 00:59:57,342: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424397788,"data":{"clientOid":"1206694830911504384","orderId":"1206694830911504385"}}
+[2024-08-12 00:59:57,342: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:59:57,343: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:59:57,347: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:59:57.347420
+[2024-08-12 00:59:58,057: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424398671,"data":{"clientOid":"1206694834204033024","orderId":"1206694834204033025"}}
+[2024-08-12 00:59:58,057: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:59:58,058: WARNING/ForkPoolWorker-7] True
+[2024-08-12 00:59:58,062: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 00:59:58.062404
+[2024-08-12 00:59:58,781: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424399474,"data":{"clientOid":"1206694837219729408","orderId":"1206694837219729409"}}
+[2024-08-12 00:59:58,781: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 00:59:58,782: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:00:03,782: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:00:03,785: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:00:03.785230
+[2024-08-12 01:00:03,790: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:00:03.790005
+[2024-08-12 01:00:04,814: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424405336,"data":{"clientOid":"1206694830911504384","orderId":"1206694830911504385"}}
+[2024-08-12 01:00:04,814: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:00:04,814: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:00:04,817: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:00:04.817632
+[2024-08-12 01:00:05,737: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424406327,"data":{"clientOid":"1206694834204033024","orderId":"1206694834204033025"}}
+[2024-08-12 01:00:05,738: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:00:05,738: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:00:05,742: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:00:05.742544
+[2024-08-12 01:00:06,457: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424407142,"data":{"clientOid":"1206694837219729408","orderId":"1206694837219729409"}}
+[2024-08-12 01:00:06,457: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:00:06,458: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:00:11,459: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:00:11,466: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:00:11.466551
+[2024-08-12 01:00:11,485: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:00:11.485216
+[2024-08-12 01:00:12,495: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424413192,"data":{"clientOid":"1206694830911504384","orderId":"1206694830911504385"}}
+[2024-08-12 01:00:12,495: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:00:12,496: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:00:12,500: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:00:12.500303
+[2024-08-12 01:00:13,184: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424413901,"data":{"clientOid":"1206694834204033024","orderId":"1206694834204033025"}}
+[2024-08-12 01:00:13,184: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:00:13,184: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:00:13,187: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:00:13.186975
+[2024-08-12 01:00:13,930: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424414548,"data":{"clientOid":"1206694837219729408","orderId":"1206694837219729409"}}
+[2024-08-12 01:00:13,931: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:00:13,932: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:00:18,932: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:00:18,935: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:00:18.935749
+[2024-08-12 01:00:18,942: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:00:18.942306
+[2024-08-12 01:00:20,424: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424421137,"data":{"clientOid":"1206694830911504384","orderId":"1206694830911504385"}}
+[2024-08-12 01:00:20,424: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:00:20,425: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:00:20,433: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:00:20.433087
+[2024-08-12 01:00:21,071: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424421784,"data":{"clientOid":"1206694834204033024","orderId":"1206694834204033025"}}
+[2024-08-12 01:00:21,071: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:00:21,071: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:00:21,073: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:00:21.072984
+[2024-08-12 01:00:21,695: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424422410,"data":{"clientOid":"1206694837219729408","orderId":"1206694837219729409"}}
+[2024-08-12 01:00:21,695: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:00:21,696: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:00:26,696: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:00:26,704: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:00:26.703925
+[2024-08-12 01:00:26,717: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:00:26.717852
+[2024-08-12 01:00:27,753: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424428266,"data":{"clientOid":"1206694830911504384","orderId":"1206694830911504385"}}
+[2024-08-12 01:00:27,753: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:00:27,754: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:00:27,762: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:00:27.762251
+[2024-08-12 01:00:28,535: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424429177,"data":{"clientOid":"1206694834204033024","orderId":"1206694834204033025"}}
+[2024-08-12 01:00:28,536: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:00:28,536: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:00:28,541: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:00:28.540920
+[2024-08-12 01:00:29,291: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424429917,"data":{"clientOid":"1206694837219729408","orderId":"1206694837219729409"}}
+[2024-08-12 01:00:29,292: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:00:29,293: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:00:34,293: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:00:34,301: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:00:34.300946
+[2024-08-12 01:00:34,315: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:00:34.314939
+[2024-08-12 01:00:35,243: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424435932,"data":{"clientOid":"1206694830911504384","orderId":"1206694830911504385"}}
+[2024-08-12 01:00:35,243: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:00:35,244: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:00:35,247: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:00:35.246974
+[2024-08-12 01:00:36,045: WARNING/ForkPoolWorker-7] {"code":"43020","msg":"Stop profit and stop loss order does not exist","requestTime":1723424436650,"data":null}
+[2024-08-12 01:00:36,045: WARNING/ForkPoolWorker-7] response_code is 43020
+[2024-08-12 01:00:36,046: WARNING/ForkPoolWorker-7] Changed
+[2024-08-12 01:00:36,866: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424437387,"data":{"clientOid":"1206694830911504384","orderId":"1206694830911504385"}}
+[2024-08-12 01:00:36,867: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:00:36,885: ERROR/ForkPoolWorker-7] Task Logic.tasks.monitoring_sltp_orders[3b97d50a-b333-4e6d-b22c-3ce360e5e3de] raised unexpected: TypeError("unsupported operand type(s) for -=: 'Position' and 'decimal.Decimal'")
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/code/Logic/tasks.py", line 92, in monitoring_sltp_orders
+    position -= tp.quantity
+TypeError: unsupported operand type(s) for -=: 'Position' and 'decimal.Decimal'
+[2024-08-12 01:05:53,305: INFO/MainProcess] Task Logic.tasks.monitoring_sltp_orders[c54777c3-a47f-4999-b75c-9af986f1726c] received
+[2024-08-12 01:05:53,306: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:05:53,310: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:05:53.310512
+[2024-08-12 01:05:53,316: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:05:53.315966
+[2024-08-12 01:05:53,953: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424754655,"data":{"clientOid":"1206696360981020672","orderId":"1206696360981020673"}}
+[2024-08-12 01:05:53,953: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:05:53,953: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:05:53,956: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:05:53.956329
+[2024-08-12 01:05:54,818: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424755404,"data":{"clientOid":"1206696364206440448","orderId":"1206696364206440449"}}
+[2024-08-12 01:05:54,818: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:05:54,819: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:05:54,823: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:05:54.823441
+[2024-08-12 01:05:56,217: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424756935,"data":{"clientOid":"1206696367469600768","orderId":"1206696367469600769"}}
+[2024-08-12 01:05:56,217: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:05:56,217: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:06:01,217: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:06:01,220: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:06:01.220796
+[2024-08-12 01:06:01,225: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:06:01.225523
+[2024-08-12 01:06:01,892: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424762586,"data":{"clientOid":"1206696360981020672","orderId":"1206696360981020673"}}
+[2024-08-12 01:06:01,892: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:06:01,892: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:06:01,895: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:06:01.895464
+[2024-08-12 01:06:02,701: WARNING/ForkPoolWorker-7] {"code":"43020","msg":"Stop profit and stop loss order does not exist","requestTime":1723424763251,"data":null}
+[2024-08-12 01:06:02,701: WARNING/ForkPoolWorker-7] response_code is 43020
+[2024-08-12 01:06:02,702: WARNING/ForkPoolWorker-7] Changed
+[2024-08-12 01:06:03,623: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424764206,"data":{"clientOid":"1206696360981020672","orderId":"1206696360981020673"}}
+[2024-08-12 01:06:03,623: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:06:03,642: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:06:03.641965
+[2024-08-12 01:06:04,408: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424765030,"data":{"clientOid":"1206696367469600768","orderId":"1206696367469600769"}}
+[2024-08-12 01:06:04,409: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:06:04,409: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:06:09,410: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:06:09,413: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:06:09.413123
+[2024-08-12 01:06:09,418: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:06:09.418000
+[2024-08-12 01:06:10,279: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424770969,"data":{"clientOid":"1206696360981020672","orderId":"1206696360981020673"}}
+[2024-08-12 01:06:10,279: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:06:10,279: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:06:10,283: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:06:10.283883
+[2024-08-12 01:06:11,033: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424771706,"data":{"clientOid":"1206696367469600768","orderId":"1206696367469600769"}}
+[2024-08-12 01:06:11,033: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:06:11,033: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:06:16,034: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:06:16,036: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:06:16.036786
+[2024-08-12 01:06:16,038: INFO/ForkPoolWorker-7] Task Logic.tasks.monitoring_sltp_orders[c54777c3-a47f-4999-b75c-9af986f1726c] succeeded in 22.73258155699932s: None
+[2024-08-12 01:06:19,503: INFO/MainProcess] Task Logic.tasks.monitoring_sltp_orders[e665475a-916a-4eaf-9593-1850013e6cbd] received
+[2024-08-12 01:06:19,504: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:06:19,508: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:06:19.508819
+[2024-08-12 01:06:19,514: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:06:19.514298
+[2024-08-12 01:06:20,852: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424781563,"data":{"clientOid":"1206696467579252736","orderId":"1206696467579252737"}}
+[2024-08-12 01:06:20,852: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:06:20,852: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:06:20,855: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:06:20.855307
+[2024-08-12 01:06:21,646: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424782252,"data":{"clientOid":"1206696473346416640","orderId":"1206696473346416641"}}
+[2024-08-12 01:06:21,646: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:06:21,646: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:06:21,648: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:06:21.648129
+[2024-08-12 01:06:23,183: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424783769,"data":{"clientOid":"1206696476940939264","orderId":"1206696476940939265"}}
+[2024-08-12 01:06:23,183: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:06:23,184: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:06:28,184: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:06:28,188: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:06:28.188860
+[2024-08-12 01:06:28,194: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:06:28.194860
+[2024-08-12 01:06:29,174: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424789776,"data":{"clientOid":"1206696467579252736","orderId":"1206696467579252737"}}
+[2024-08-12 01:06:29,174: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:06:29,174: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:06:29,177: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:06:29.177780
+[2024-08-12 01:06:29,819: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723424790522,"data":{"clientOid":"1206696473346416640","orderId":"1206696473346416641"}}
+[2024-08-12 01:06:29,819: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:06:29,819: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:06:29,822: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:06:29.822544
+[2024-08-12 01:06:30,554: WARNING/ForkPoolWorker-7] {"code":"43020","msg":"Stop profit and stop loss order does not exist","requestTime":1723424791193,"data":null}
+[2024-08-12 01:06:30,554: WARNING/ForkPoolWorker-7] response_code is 43020
+[2024-08-12 01:06:30,554: WARNING/ForkPoolWorker-7] Changed
+[2024-08-12 01:06:30,581: INFO/ForkPoolWorker-7] Task Logic.tasks.monitoring_sltp_orders[e665475a-916a-4eaf-9593-1850013e6cbd] succeeded in 11.077720306000629s: None
+[2024-08-12 01:11:52,030: WARNING/MainProcess] /usr/local/lib/python3.12/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-08-12 01:11:52,035: INFO/MainProcess] Connected to redis://redis:6379/0
+[2024-08-12 01:11:52,037: WARNING/MainProcess] /usr/local/lib/python3.12/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-08-12 01:11:52,040: INFO/MainProcess] mingle: searching for neighbors
+[2024-08-12 01:11:53,048: INFO/MainProcess] mingle: all alone
+[2024-08-12 01:11:53,058: INFO/MainProcess] celery@a646d974b25e ready.
+[2024-08-12 01:12:08,101: INFO/MainProcess] Task Logic.tasks.monitoring_sltp_orders[7a59fecc-8970-4ebf-95b0-4b20984db67e] received
+[2024-08-12 01:12:08,102: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:12:08,113: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:12:08.113464
+[2024-08-12 01:12:08,121: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:12:08.121191
+[2024-08-12 01:12:08,884: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425129456,"data":{"clientOid":"1206697932100186112","orderId":"1206697932100186113"}}
+[2024-08-12 01:12:08,884: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:12:08,884: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:12:08,887: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:12:08.887951
+[2024-08-12 01:12:09,505: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425130218,"data":{"clientOid":"1206697935086534656","orderId":"1206697935086534657"}}
+[2024-08-12 01:12:09,505: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:12:09,505: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:12:09,507: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:12:09.507211
+[2024-08-12 01:12:10,931: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425131574,"data":{"clientOid":"1206697938907537408","orderId":"1206697938907537409"}}
+[2024-08-12 01:12:10,932: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:12:10,932: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:12:15,932: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:12:15,940: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:12:15.940117
+[2024-08-12 01:12:15,954: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:12:15.953965
+[2024-08-12 01:12:16,639: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425137345,"data":{"clientOid":"1206697932100186112","orderId":"1206697932100186113"}}
+[2024-08-12 01:12:16,639: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:12:16,639: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:12:16,642: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:12:16.642552
+[2024-08-12 01:12:17,485: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425138123,"data":{"clientOid":"1206697935086534656","orderId":"1206697935086534657"}}
+[2024-08-12 01:12:17,485: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:12:17,485: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:12:17,487: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:12:17.487316
+[2024-08-12 01:12:18,919: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425139482,"data":{"clientOid":"1206697938907537408","orderId":"1206697938907537409"}}
+[2024-08-12 01:12:18,919: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:12:18,919: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:12:23,919: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:12:23,922: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:12:23.922313
+[2024-08-12 01:12:23,927: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:12:23.926976
+[2024-08-12 01:12:24,858: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425145351,"data":{"clientOid":"1206697932100186112","orderId":"1206697932100186113"}}
+[2024-08-12 01:12:24,858: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:12:24,858: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:12:24,862: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:12:24.861981
+[2024-08-12 01:12:25,677: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425146263,"data":{"clientOid":"1206697935086534656","orderId":"1206697935086534657"}}
+[2024-08-12 01:12:25,677: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:12:25,677: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:12:25,679: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:12:25.679313
+[2024-08-12 01:12:27,135: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425147853,"data":{"clientOid":"1206697938907537408","orderId":"1206697938907537409"}}
+[2024-08-12 01:12:27,135: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:12:27,135: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:12:32,135: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:12:32,138: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:12:32.138308
+[2024-08-12 01:12:32,143: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:12:32.143216
+[2024-08-12 01:12:32,948: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425153511,"data":{"clientOid":"1206697932100186112","orderId":"1206697932100186113"}}
+[2024-08-12 01:12:32,948: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:12:32,949: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:12:32,955: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:12:32.955445
+[2024-08-12 01:12:33,664: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425154301,"data":{"clientOid":"1206697935086534656","orderId":"1206697935086534657"}}
+[2024-08-12 01:12:33,664: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:12:33,665: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:12:33,666: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:12:33.666820
+[2024-08-12 01:12:34,383: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425155006,"data":{"clientOid":"1206697938907537408","orderId":"1206697938907537409"}}
+[2024-08-12 01:12:34,383: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:12:34,384: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:12:39,384: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:12:39,387: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:12:39.387606
+[2024-08-12 01:12:39,392: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:12:39.392309
+[2024-08-12 01:12:40,219: WARNING/ForkPoolWorker-7] {"code":"43020","msg":"Stop profit and stop loss order does not exist","requestTime":1723425160908,"data":null}
+[2024-08-12 01:12:40,219: WARNING/ForkPoolWorker-7] response_code is 43020
+[2024-08-12 01:12:40,219: WARNING/ForkPoolWorker-7] Changed
+[2024-08-12 01:12:40,246: INFO/ForkPoolWorker-7] Task Logic.tasks.monitoring_sltp_orders[7a59fecc-8970-4ebf-95b0-4b20984db67e] succeeded in 32.14454765600021s: None
+[2024-08-12 01:13:03,776: WARNING/MainProcess] /usr/local/lib/python3.12/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-08-12 01:13:03,781: INFO/MainProcess] Connected to redis://redis:6379/0
+[2024-08-12 01:13:03,783: WARNING/MainProcess] /usr/local/lib/python3.12/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-08-12 01:13:03,786: INFO/MainProcess] mingle: searching for neighbors
+[2024-08-12 01:13:04,794: INFO/MainProcess] mingle: all alone
+[2024-08-12 01:13:04,810: INFO/MainProcess] celery@a646d974b25e ready.
+[2024-08-12 01:13:21,277: INFO/MainProcess] Task Logic.tasks.monitoring_sltp_orders[16a79c19-1983-4805-bb3b-d984efae288c] received
+[2024-08-12 01:13:21,278: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:13:21,289: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:13:21.289389
+[2024-08-12 01:13:21,296: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:13:21.296294
+[2024-08-12 01:13:22,025: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425202689,"data":{"clientOid":"1206698236300476416","orderId":"1206698236300476417"}}
+[2024-08-12 01:13:22,026: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:13:22,026: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:13:22,029: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:13:22.029470
+[2024-08-12 01:13:22,817: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425203415,"data":{"clientOid":"1206698240020824064","orderId":"1206698240020824065"}}
+[2024-08-12 01:13:22,817: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:13:22,817: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:13:22,819: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:13:22.819799
+[2024-08-12 01:13:23,534: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425204219,"data":{"clientOid":"1206698245968338944","orderId":"1206698245968338945"}}
+[2024-08-12 01:13:23,534: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:13:23,534: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:13:28,534: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:13:28,537: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:13:28.537431
+[2024-08-12 01:13:28,542: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:13:28.542531
+[2024-08-12 01:13:29,474: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425210060,"data":{"clientOid":"1206698236300476416","orderId":"1206698236300476417"}}
+[2024-08-12 01:13:29,475: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:13:29,475: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:13:29,480: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:13:29.480917
+[2024-08-12 01:13:30,191: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425210820,"data":{"clientOid":"1206698240020824064","orderId":"1206698240020824065"}}
+[2024-08-12 01:13:30,192: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:13:30,193: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:13:30,195: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:13:30.194971
+[2024-08-12 01:13:31,008: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425211599,"data":{"clientOid":"1206698245968338944","orderId":"1206698245968338945"}}
+[2024-08-12 01:13:31,009: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:13:31,009: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:13:36,009: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:13:36,012: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:13:36.012643
+[2024-08-12 01:13:36,017: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:13:36.017429
+[2024-08-12 01:13:36,847: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425217432,"data":{"clientOid":"1206698236300476416","orderId":"1206698236300476417"}}
+[2024-08-12 01:13:36,847: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:13:36,848: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:13:36,852: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:13:36.852232
+[2024-08-12 01:13:37,468: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425218178,"data":{"clientOid":"1206698240020824064","orderId":"1206698240020824065"}}
+[2024-08-12 01:13:37,469: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:13:37,469: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:13:37,473: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:13:37.473541
+[2024-08-12 01:13:38,178: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425218869,"data":{"clientOid":"1206698245968338944","orderId":"1206698245968338945"}}
+[2024-08-12 01:13:38,178: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:13:38,179: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:13:43,179: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:13:43,182: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:13:43.182796
+[2024-08-12 01:13:43,188: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:13:43.188192
+[2024-08-12 01:13:44,115: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425224531,"data":{"clientOid":"1206698236300476416","orderId":"1206698236300476417"}}
+[2024-08-12 01:13:44,116: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:13:44,116: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:13:44,119: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:13:44.119310
+[2024-08-12 01:13:44,726: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425225444,"data":{"clientOid":"1206698240020824064","orderId":"1206698240020824065"}}
+[2024-08-12 01:13:44,726: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:13:44,727: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:13:44,728: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:13:44.728732
+[2024-08-12 01:13:45,456: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425226152,"data":{"clientOid":"1206698245968338944","orderId":"1206698245968338945"}}
+[2024-08-12 01:13:45,456: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:13:45,457: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:13:50,457: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:13:50,460: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:13:50.460440
+[2024-08-12 01:13:50,465: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:13:50.465704
+[2024-08-12 01:13:51,287: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425231972,"data":{"clientOid":"1206698236300476416","orderId":"1206698236300476417"}}
+[2024-08-12 01:13:51,288: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:13:51,288: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:13:51,294: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:13:51.294607
+[2024-08-12 01:13:51,934: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425232635,"data":{"clientOid":"1206698240020824064","orderId":"1206698240020824065"}}
+[2024-08-12 01:13:51,934: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:13:51,934: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:13:51,936: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:13:51.936314
+[2024-08-12 01:13:52,717: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425233336,"data":{"clientOid":"1206698245968338944","orderId":"1206698245968338945"}}
+[2024-08-12 01:13:52,717: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:13:52,717: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:13:57,718: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:13:57,720: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:13:57.720796
+[2024-08-12 01:13:57,725: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:13:57.725802
+[2024-08-12 01:13:58,861: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425239171,"data":{"clientOid":"1206698236300476416","orderId":"1206698236300476417"}}
+[2024-08-12 01:13:58,861: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:13:58,862: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:13:58,865: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:13:58.865227
+[2024-08-12 01:13:59,680: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425240291,"data":{"clientOid":"1206698240020824064","orderId":"1206698240020824065"}}
+[2024-08-12 01:13:59,680: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:13:59,681: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:13:59,682: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:13:59.682751
+[2024-08-12 01:14:00,403: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425241089,"data":{"clientOid":"1206698245968338944","orderId":"1206698245968338945"}}
+[2024-08-12 01:14:00,404: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:14:00,404: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:14:05,404: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:14:05,407: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:14:05.407412
+[2024-08-12 01:14:05,412: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:14:05.412706
+[2024-08-12 01:14:06,112: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425246816,"data":{"clientOid":"1206698236300476416","orderId":"1206698236300476417"}}
+[2024-08-12 01:14:06,112: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:14:06,112: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:14:06,115: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:14:06.115925
+[2024-08-12 01:14:06,850: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425247479,"data":{"clientOid":"1206698240020824064","orderId":"1206698240020824065"}}
+[2024-08-12 01:14:06,850: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:14:06,851: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:14:06,855: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:14:06.855247
+[2024-08-12 01:14:07,668: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425248266,"data":{"clientOid":"1206698245968338944","orderId":"1206698245968338945"}}
+[2024-08-12 01:14:07,668: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:14:07,669: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:14:12,669: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:14:12,677: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:14:12.677124
+[2024-08-12 01:14:12,686: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:14:12.686952
+[2024-08-12 01:14:13,513: WARNING/ForkPoolWorker-7] {"code":"43020","msg":"Stop profit and stop loss order does not exist","requestTime":1723425254207,"data":null}
+[2024-08-12 01:14:13,514: WARNING/ForkPoolWorker-7] response_code is 43020
+[2024-08-12 01:14:13,514: WARNING/ForkPoolWorker-7] Changed
+[2024-08-12 01:14:13,539: INFO/ForkPoolWorker-7] Task Logic.tasks.monitoring_sltp_orders[16a79c19-1983-4805-bb3b-d984efae288c] succeeded in 52.261230340999646s: None
+[2024-08-12 01:14:18,019: INFO/MainProcess] Task Logic.tasks.monitoring_sltp_orders[defb617f-6727-4b25-996b-3e6e3faa6000] received
+[2024-08-12 01:14:18,020: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:14:18,025: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:14:18.025748
+[2024-08-12 01:14:18,031: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:14:18.031129
+[2024-08-12 01:14:18,758: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425259430,"data":{"clientOid":"1206698477766557696","orderId":"1206698477766557697"}}
+[2024-08-12 01:14:18,758: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:14:18,758: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:14:18,762: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:14:18.762644
+[2024-08-12 01:14:19,546: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425260150,"data":{"clientOid":"1206698480929062912","orderId":"1206698480929062913"}}
+[2024-08-12 01:14:19,546: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:14:19,547: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:14:19,548: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:14:19.548619
+[2024-08-12 01:14:20,273: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425260950,"data":{"clientOid":"1206698483747631104","orderId":"1206698483747631105"}}
+[2024-08-12 01:14:20,274: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:14:20,275: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:14:25,275: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:14:25,278: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:14:25.278196
+[2024-08-12 01:14:25,283: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:14:25.283209
+[2024-08-12 01:14:26,101: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425266686,"data":{"clientOid":"1206698477766557696","orderId":"1206698477766557697"}}
+[2024-08-12 01:14:26,101: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:14:26,101: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:14:26,105: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:14:26.105215
+[2024-08-12 01:14:26,872: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425267436,"data":{"clientOid":"1206698480929062912","orderId":"1206698480929062913"}}
+[2024-08-12 01:14:26,873: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:14:26,873: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:14:26,877: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:14:26.877325
+[2024-08-12 01:14:28,557: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425269182,"data":{"clientOid":"1206698483747631104","orderId":"1206698483747631105"}}
+[2024-08-12 01:14:28,557: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:14:28,557: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:14:33,557: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:14:33,560: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:14:33.560798
+[2024-08-12 01:14:33,565: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:14:33.565486
+[2024-08-12 01:14:35,007: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425275693,"data":{"clientOid":"1206698477766557696","orderId":"1206698477766557697"}}
+[2024-08-12 01:14:35,008: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:14:35,008: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:14:35,011: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:14:35.011293
+[2024-08-12 01:14:35,725: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425276347,"data":{"clientOid":"1206698480929062912","orderId":"1206698480929062913"}}
+[2024-08-12 01:14:35,725: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:14:35,725: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:14:35,727: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:14:35.727372
+[2024-08-12 01:14:36,478: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425277144,"data":{"clientOid":"1206698483747631104","orderId":"1206698483747631105"}}
+[2024-08-12 01:14:36,479: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:14:36,479: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:14:41,479: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:14:41,482: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:14:41.482949
+[2024-08-12 01:14:41,488: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:14:41.488284
+[2024-08-12 01:14:42,284: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425282972,"data":{"clientOid":"1206698477766557696","orderId":"1206698477766557697"}}
+[2024-08-12 01:14:42,284: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:14:42,285: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:14:42,288: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:14:42.288595
+[2024-08-12 01:14:43,063: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425283700,"data":{"clientOid":"1206698480929062912","orderId":"1206698480929062913"}}
+[2024-08-12 01:14:43,063: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:14:43,063: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:14:43,064: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:14:43.064953
+[2024-08-12 01:14:43,919: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425284438,"data":{"clientOid":"1206698483747631104","orderId":"1206698483747631105"}}
+[2024-08-12 01:14:43,919: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:14:43,920: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:14:48,920: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:14:48,923: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:14:48.923526
+[2024-08-12 01:14:48,928: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:14:48.928606
+[2024-08-12 01:14:49,765: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425290439,"data":{"clientOid":"1206698477766557696","orderId":"1206698477766557697"}}
+[2024-08-12 01:14:49,765: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:14:49,768: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:14:49,776: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:14:49.776204
+[2024-08-12 01:14:50,431: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425291111,"data":{"clientOid":"1206698480929062912","orderId":"1206698480929062913"}}
+[2024-08-12 01:14:50,432: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:14:50,432: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:14:50,433: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:14:50.433867
+[2024-08-12 01:14:51,173: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425291879,"data":{"clientOid":"1206698483747631104","orderId":"1206698483747631105"}}
+[2024-08-12 01:14:51,174: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:14:51,174: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:14:56,174: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:14:56,182: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:14:56.181993
+[2024-08-12 01:14:56,195: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:14:56.195884
+[2024-08-12 01:14:56,888: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425297547,"data":{"clientOid":"1206698477766557696","orderId":"1206698477766557697"}}
+[2024-08-12 01:14:56,889: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:14:56,889: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:14:56,893: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:14:56.893420
+[2024-08-12 01:14:57,639: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425298231,"data":{"clientOid":"1206698480929062912","orderId":"1206698480929062913"}}
+[2024-08-12 01:14:57,640: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:14:57,640: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:14:57,642: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:14:57.642189
+[2024-08-12 01:14:59,277: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425299825,"data":{"clientOid":"1206698483747631104","orderId":"1206698483747631105"}}
+[2024-08-12 01:14:59,277: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:14:59,277: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:15:04,278: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:15:04,281: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:15:04.281019
+[2024-08-12 01:15:04,287: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:15:04.287128
+[2024-08-12 01:15:05,024: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425305711,"data":{"clientOid":"1206698477766557696","orderId":"1206698477766557697"}}
+[2024-08-12 01:15:05,024: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:15:05,024: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:15:05,028: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:15:05.028075
+[2024-08-12 01:15:05,933: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425306521,"data":{"clientOid":"1206698480929062912","orderId":"1206698480929062913"}}
+[2024-08-12 01:15:05,934: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:15:05,934: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:15:05,936: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:15:05.936854
+[2024-08-12 01:15:06,717: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425307431,"data":{"clientOid":"1206698483747631104","orderId":"1206698483747631105"}}
+[2024-08-12 01:15:06,717: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:15:06,717: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:15:11,718: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:15:11,720: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:15:11.720905
+[2024-08-12 01:15:11,725: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:15:11.725917
+[2024-08-12 01:15:13,102: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425313741,"data":{"clientOid":"1206698477766557696","orderId":"1206698477766557697"}}
+[2024-08-12 01:15:13,102: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:15:13,103: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:15:13,107: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:15:13.107249
+[2024-08-12 01:15:13,922: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425314528,"data":{"clientOid":"1206698480929062912","orderId":"1206698480929062913"}}
+[2024-08-12 01:15:13,922: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:15:13,923: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:15:13,927: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:15:13.927691
+[2024-08-12 01:15:15,255: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425315927,"data":{"clientOid":"1206698483747631104","orderId":"1206698483747631105"}}
+[2024-08-12 01:15:15,255: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:15:15,255: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:15:20,255: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:15:20,258: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:15:20.258689
+[2024-08-12 01:15:20,263: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:15:20.263538
+[2024-08-12 01:15:21,073: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425321679,"data":{"clientOid":"1206698477766557696","orderId":"1206698477766557697"}}
+[2024-08-12 01:15:21,073: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:15:21,073: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:15:21,076: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:15:21.076640
+[2024-08-12 01:15:21,805: WARNING/ForkPoolWorker-7] {"code":"43020","msg":"Stop profit and stop loss order does not exist","requestTime":1723425322423,"data":null}
+[2024-08-12 01:15:21,806: WARNING/ForkPoolWorker-7] response_code is 43020
+[2024-08-12 01:15:21,807: WARNING/ForkPoolWorker-7] Changed
+[2024-08-12 01:15:22,727: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425323325,"data":{"clientOid":"1206698477766557696","orderId":"1206698477766557697"}}
+[2024-08-12 01:15:22,727: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:15:22,746: ERROR/ForkPoolWorker-7] Task Logic.tasks.monitoring_sltp_orders[defb617f-6727-4b25-996b-3e6e3faa6000] raised unexpected: TypeError("unsupported operand type(s) for -=: 'Position' and 'decimal.Decimal'")
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/code/Logic/tasks.py", line 92, in monitoring_sltp_orders
+    position -= tp.quantity
+TypeError: unsupported operand type(s) for -=: 'Position' and 'decimal.Decimal'
+[2024-08-12 01:16:17,110: INFO/MainProcess] Task Logic.tasks.monitoring_sltp_orders[a0a86801-6425-4842-831a-c1915aa6ee6c] received
+[2024-08-12 01:16:17,111: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:16:17,116: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:16:17.116760
+[2024-08-12 01:16:17,130: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:16:17.130933
+[2024-08-12 01:16:17,920: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425378471,"data":{"clientOid":"1206698974569275392","orderId":"1206698974569275393"}}
+[2024-08-12 01:16:17,920: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:16:17,920: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:16:17,924: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:16:17.924006
+[2024-08-12 01:16:18,637: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425379252,"data":{"clientOid":"1206698980495835136","orderId":"1206698980495835137"}}
+[2024-08-12 01:16:18,637: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:16:18,637: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:16:18,641: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:16:18.641080
+[2024-08-12 01:16:19,456: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425380053,"data":{"clientOid":"1206698983419256832","orderId":"1206698983419256833"}}
+[2024-08-12 01:16:19,456: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:16:19,457: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:16:24,457: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:16:24,464: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:16:24.464766
+[2024-08-12 01:16:24,478: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:16:24.478568
+[2024-08-12 01:16:26,039: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425386679,"data":{"clientOid":"1206698974569275392","orderId":"1206698974569275393"}}
+[2024-08-12 01:16:26,039: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:16:26,039: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:16:26,042: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:16:26.042600
+[2024-08-12 01:16:26,931: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425387590,"data":{"clientOid":"1206698980495835136","orderId":"1206698980495835137"}}
+[2024-08-12 01:16:26,931: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:16:26,932: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:16:26,933: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:16:26.933703
+[2024-08-12 01:16:27,855: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425388370,"data":{"clientOid":"1206698983419256832","orderId":"1206698983419256833"}}
+[2024-08-12 01:16:27,856: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:16:27,856: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:16:32,856: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:16:32,859: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:16:32.859817
+[2024-08-12 01:16:32,864: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:16:32.864554
+[2024-08-12 01:16:34,305: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425394967,"data":{"clientOid":"1206698974569275392","orderId":"1206698974569275393"}}
+[2024-08-12 01:16:34,305: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:16:34,305: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:16:34,310: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:16:34.310824
+[2024-08-12 01:16:35,021: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425395642,"data":{"clientOid":"1206698980495835136","orderId":"1206698980495835137"}}
+[2024-08-12 01:16:35,022: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:16:35,022: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:16:35,024: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:16:35.024801
+[2024-08-12 01:16:35,740: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425396353,"data":{"clientOid":"1206698983419256832","orderId":"1206698983419256833"}}
+[2024-08-12 01:16:35,740: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:16:35,741: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:16:40,741: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:16:40,749: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:16:40.748995
+[2024-08-12 01:16:40,763: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:16:40.762957
+[2024-08-12 01:16:41,884: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425402384,"data":{"clientOid":"1206698974569275392","orderId":"1206698974569275393"}}
+[2024-08-12 01:16:41,884: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:16:41,885: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:16:41,889: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:16:41.889188
+[2024-08-12 01:16:43,420: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425403991,"data":{"clientOid":"1206698980495835136","orderId":"1206698980495835137"}}
+[2024-08-12 01:16:43,420: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:16:43,421: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:16:43,423: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:16:43.423600
+[2024-08-12 01:16:44,318: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425405026,"data":{"clientOid":"1206698983419256832","orderId":"1206698983419256833"}}
+[2024-08-12 01:16:44,319: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:16:44,319: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:16:49,319: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:16:49,322: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:16:49.322465
+[2024-08-12 01:16:49,327: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:16:49.327424
+[2024-08-12 01:16:50,179: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425410767,"data":{"clientOid":"1206698974569275392","orderId":"1206698974569275393"}}
+[2024-08-12 01:16:50,179: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:16:50,180: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:16:50,188: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:16:50.188243
+[2024-08-12 01:16:50,929: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425411598,"data":{"clientOid":"1206698980495835136","orderId":"1206698980495835137"}}
+[2024-08-12 01:16:50,929: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:16:50,930: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:16:50,934: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:16:50.934485
+[2024-08-12 01:16:52,329: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425412946,"data":{"clientOid":"1206698983419256832","orderId":"1206698983419256833"}}
+[2024-08-12 01:16:52,329: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:16:52,330: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:16:57,330: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:16:57,333: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:16:57.333274
+[2024-08-12 01:16:57,338: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:16:57.338354
+[2024-08-12 01:16:58,166: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425418859,"data":{"clientOid":"1206698974569275392","orderId":"1206698974569275393"}}
+[2024-08-12 01:16:58,166: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:16:58,166: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:16:58,169: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:16:58.169456
+[2024-08-12 01:16:58,934: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425419596,"data":{"clientOid":"1206698980495835136","orderId":"1206698980495835137"}}
+[2024-08-12 01:16:58,934: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:16:58,934: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:16:58,936: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:16:58.936846
+[2024-08-12 01:16:59,701: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425420263,"data":{"clientOid":"1206698983419256832","orderId":"1206698983419256833"}}
+[2024-08-12 01:16:59,701: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:16:59,702: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:17:04,702: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:17:04,705: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:17:04.705433
+[2024-08-12 01:17:04,710: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:17:04.710491
+[2024-08-12 01:17:05,741: WARNING/ForkPoolWorker-7] {"code":"43020","msg":"Stop profit and stop loss order does not exist","requestTime":1723425426286,"data":null}
+[2024-08-12 01:17:05,741: WARNING/ForkPoolWorker-7] response_code is 43020
+[2024-08-12 01:17:05,741: WARNING/ForkPoolWorker-7] Changed
+[2024-08-12 01:17:05,763: INFO/ForkPoolWorker-7] Task Logic.tasks.monitoring_sltp_orders[a0a86801-6425-4842-831a-c1915aa6ee6c] succeeded in 48.651219919999676s: None
+[2024-08-12 01:23:06,104: WARNING/MainProcess] /usr/local/lib/python3.12/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-08-12 01:23:06,109: INFO/MainProcess] Connected to redis://redis:6379/0
+[2024-08-12 01:23:06,110: WARNING/MainProcess] /usr/local/lib/python3.12/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-08-12 01:23:06,112: INFO/MainProcess] mingle: searching for neighbors
+[2024-08-12 01:23:07,122: INFO/MainProcess] mingle: all alone
+[2024-08-12 01:23:07,139: INFO/MainProcess] celery@a646d974b25e ready.
+[2024-08-12 01:24:15,116: INFO/MainProcess] Task Logic.tasks.monitoring_sltp_orders[0bba7e5e-fc63-4a97-bfad-ac1f28c06f45] received
+[2024-08-12 01:24:15,118: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:24:15,128: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:24:15.128878
+[2024-08-12 01:24:15,135: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:24:15.135341
+[2024-08-12 01:24:15,824: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425856471,"data":{"clientOid":"1206700981535350784","orderId":"1206700981535350785"}}
+[2024-08-12 01:24:15,824: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:24:15,825: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:24:15,833: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:24:15.833723
+[2024-08-12 01:24:16,509: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425857227,"data":{"clientOid":"1206700984894996480","orderId":"1206700984894996481"}}
+[2024-08-12 01:24:16,509: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:24:16,509: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:24:16,511: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:24:16.511481
+[2024-08-12 01:24:17,226: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425857949,"data":{"clientOid":"1206700987696787456","orderId":"1206700987696787457"}}
+[2024-08-12 01:24:17,226: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:24:17,226: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:24:22,226: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:24:22,229: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:24:22.229903
+[2024-08-12 01:24:22,235: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:24:22.235156
+[2024-08-12 01:24:22,889: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425863575,"data":{"clientOid":"1206700981535350784","orderId":"1206700981535350785"}}
+[2024-08-12 01:24:22,889: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:24:22,890: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:24:22,898: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:24:22.898245
+[2024-08-12 01:24:23,540: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425864235,"data":{"clientOid":"1206700984894996480","orderId":"1206700984894996481"}}
+[2024-08-12 01:24:23,540: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:24:23,541: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:24:23,543: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:24:23.543296
+[2024-08-12 01:24:24,489: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425865199,"data":{"clientOid":"1206700987696787456","orderId":"1206700987696787457"}}
+[2024-08-12 01:24:24,489: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:24:24,489: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:24:29,490: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:24:29,493: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:24:29.493068
+[2024-08-12 01:24:29,498: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:24:29.498776
+[2024-08-12 01:24:30,264: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425870957,"data":{"clientOid":"1206700981535350784","orderId":"1206700981535350785"}}
+[2024-08-12 01:24:30,264: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:24:30,265: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:24:30,275: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:24:30.275497
+[2024-08-12 01:24:31,284: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425871840,"data":{"clientOid":"1206700984894996480","orderId":"1206700984894996481"}}
+[2024-08-12 01:24:31,284: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:24:31,285: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:24:31,286: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:24:31.286584
+[2024-08-12 01:24:32,002: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425872614,"data":{"clientOid":"1206700987696787456","orderId":"1206700987696787457"}}
+[2024-08-12 01:24:32,002: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:24:32,003: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:24:37,003: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:24:37,006: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:24:37.006496
+[2024-08-12 01:24:37,011: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:24:37.011420
+[2024-08-12 01:24:37,939: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425878526,"data":{"clientOid":"1206700981535350784","orderId":"1206700981535350785"}}
+[2024-08-12 01:24:37,939: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:24:37,940: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:24:37,943: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:24:37.943140
+[2024-08-12 01:24:38,760: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425879370,"data":{"clientOid":"1206700984894996480","orderId":"1206700984894996481"}}
+[2024-08-12 01:24:38,760: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:24:38,761: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:24:38,765: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:24:38.765589
+[2024-08-12 01:24:39,577: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425880126,"data":{"clientOid":"1206700987696787456","orderId":"1206700987696787457"}}
+[2024-08-12 01:24:39,577: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:24:39,578: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:24:44,578: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:24:44,581: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:24:44.581372
+[2024-08-12 01:24:44,585: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:24:44.585901
+[2024-08-12 01:24:45,489: WARNING/ForkPoolWorker-7] {"code":"43020","msg":"Stop profit and stop loss order does not exist","requestTime":1723425886216,"data":null}
+[2024-08-12 01:24:45,489: WARNING/ForkPoolWorker-7] response_code is 43020
+[2024-08-12 01:24:45,489: WARNING/ForkPoolWorker-7] Changed
+[2024-08-12 01:24:45,514: INFO/ForkPoolWorker-7] Task Logic.tasks.monitoring_sltp_orders[0bba7e5e-fc63-4a97-bfad-ac1f28c06f45] succeeded in 30.396366077000494s: None
+[2024-08-12 01:25:36,420: INFO/MainProcess] Task Logic.tasks.monitoring_sltp_orders[7b891728-06d3-467b-8b62-2032f3a1c77c] received
+[2024-08-12 01:25:36,421: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:25:36,428: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:25:36.428544
+[2024-08-12 01:25:36,435: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:25:36.435071
+[2024-08-12 01:25:37,230: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425937815,"data":{"clientOid":"1206701323035582464","orderId":"1206701323035582465"}}
+[2024-08-12 01:25:37,230: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:25:37,230: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:25:37,233: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:25:37.233733
+[2024-08-12 01:25:37,948: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425938566,"data":{"clientOid":"1206701326361673728","orderId":"1206701326361673729"}}
+[2024-08-12 01:25:37,948: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:25:37,949: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:25:37,953: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:25:37.953343
+[2024-08-12 01:25:38,662: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425939287,"data":{"clientOid":"1206701329545142272","orderId":"1206701329545142273"}}
+[2024-08-12 01:25:38,662: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:25:38,663: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:25:43,663: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:25:43,666: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:25:43.666087
+[2024-08-12 01:25:43,670: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:25:43.670853
+[2024-08-12 01:25:44,499: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425945108,"data":{"clientOid":"1206701323035582464","orderId":"1206701323035582465"}}
+[2024-08-12 01:25:44,500: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:25:44,500: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:25:44,504: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:25:44.504626
+[2024-08-12 01:25:45,204: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425945904,"data":{"clientOid":"1206701326361673728","orderId":"1206701326361673729"}}
+[2024-08-12 01:25:45,204: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:25:45,204: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:25:45,206: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:25:45.206302
+[2024-08-12 01:25:46,140: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425946722,"data":{"clientOid":"1206701329545142272","orderId":"1206701329545142273"}}
+[2024-08-12 01:25:46,140: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:25:46,141: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:25:51,141: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:25:51,149: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:25:51.149077
+[2024-08-12 01:25:51,162: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:25:51.162575
+[2024-08-12 01:25:52,077: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425952661,"data":{"clientOid":"1206701323035582464","orderId":"1206701323035582465"}}
+[2024-08-12 01:25:52,077: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:25:52,077: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:25:52,080: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:25:52.080570
+[2024-08-12 01:25:52,793: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425953424,"data":{"clientOid":"1206701326361673728","orderId":"1206701326361673729"}}
+[2024-08-12 01:25:52,794: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:25:52,794: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:25:52,795: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:25:52.795822
+[2024-08-12 01:25:54,162: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425954882,"data":{"clientOid":"1206701329545142272","orderId":"1206701329545142273"}}
+[2024-08-12 01:25:54,162: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:25:54,162: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:25:59,163: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:25:59,166: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:25:59.166380
+[2024-08-12 01:25:59,171: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:25:59.171224
+[2024-08-12 01:25:59,925: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425960567,"data":{"clientOid":"1206701323035582464","orderId":"1206701323035582465"}}
+[2024-08-12 01:25:59,926: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:25:59,926: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:25:59,929: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:25:59.929221
+[2024-08-12 01:26:00,576: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425961275,"data":{"clientOid":"1206701326361673728","orderId":"1206701326361673729"}}
+[2024-08-12 01:26:00,576: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:26:00,576: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:26:00,578: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:26:00.578627
+[2024-08-12 01:26:01,397: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425961982,"data":{"clientOid":"1206701329545142272","orderId":"1206701329545142273"}}
+[2024-08-12 01:26:01,397: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:26:01,398: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:26:06,398: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:26:06,406: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:26:06.406323
+[2024-08-12 01:26:06,420: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:26:06.420151
+[2024-08-12 01:26:07,334: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425967932,"data":{"clientOid":"1206701323035582464","orderId":"1206701323035582465"}}
+[2024-08-12 01:26:07,335: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:26:07,335: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:26:07,338: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:26:07.338878
+[2024-08-12 01:26:08,461: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425969060,"data":{"clientOid":"1206701326361673728","orderId":"1206701326361673729"}}
+[2024-08-12 01:26:08,461: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:26:08,461: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:26:08,463: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:26:08.463309
+[2024-08-12 01:26:09,128: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425969850,"data":{"clientOid":"1206701329545142272","orderId":"1206701329545142273"}}
+[2024-08-12 01:26:09,128: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:26:09,129: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:26:14,129: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:26:14,132: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:26:14.132462
+[2024-08-12 01:26:14,137: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:26:14.137914
+[2024-08-12 01:26:14,915: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425975555,"data":{"clientOid":"1206701323035582464","orderId":"1206701323035582465"}}
+[2024-08-12 01:26:14,915: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:26:14,916: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:26:14,921: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:26:14.921225
+[2024-08-12 01:26:16,822: WARNING/ForkPoolWorker-7] {"code":"43020","msg":"Stop profit and stop loss order does not exist","requestTime":1723425977478,"data":null}
+[2024-08-12 01:26:16,822: WARNING/ForkPoolWorker-7] response_code is 43020
+[2024-08-12 01:26:16,822: WARNING/ForkPoolWorker-7] Changed
+[2024-08-12 01:26:17,575: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425978160,"data":{"clientOid":"1206701323035582464","orderId":"1206701323035582465"}}
+[2024-08-12 01:26:17,575: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:26:17,592: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:26:17.592681
+[2024-08-12 01:26:18,291: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425978991,"data":{"clientOid":"1206701329545142272","orderId":"1206701329545142273"}}
+[2024-08-12 01:26:18,292: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:26:18,292: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:26:23,292: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:26:23,295: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:26:23.295393
+[2024-08-12 01:26:23,301: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:26:23.300987
+[2024-08-12 01:26:23,934: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425984633,"data":{"clientOid":"1206701323035582464","orderId":"1206701323035582465"}}
+[2024-08-12 01:26:23,934: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:26:23,934: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:26:23,937: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:26:23.937454
+[2024-08-12 01:26:24,568: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425985271,"data":{"clientOid":"1206701329545142272","orderId":"1206701329545142273"}}
+[2024-08-12 01:26:24,568: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:26:24,569: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:26:29,569: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:26:29,572: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:26:29.572389
+[2024-08-12 01:26:29,577: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:26:29.577280
+[2024-08-12 01:26:30,225: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425990926,"data":{"clientOid":"1206701323035582464","orderId":"1206701323035582465"}}
+[2024-08-12 01:26:30,225: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:26:30,225: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:26:30,229: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:26:30.229501
+[2024-08-12 01:26:30,991: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723425991648,"data":{"clientOid":"1206701329545142272","orderId":"1206701329545142273"}}
+[2024-08-12 01:26:30,991: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:26:30,992: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:26:35,992: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:26:35,995: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:26:35.995293
+[2024-08-12 01:26:35,997: INFO/ForkPoolWorker-7] Task Logic.tasks.monitoring_sltp_orders[7b891728-06d3-467b-8b62-2032f3a1c77c] succeeded in 59.57620879100068s: None
+[2024-08-12 01:26:39,087: INFO/MainProcess] Task Logic.tasks.monitoring_sltp_orders[0a617c73-afb5-4417-90ff-26f9f762d454] received
+[2024-08-12 01:26:39,088: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:26:39,093: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:26:39.093633
+[2024-08-12 01:26:39,099: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:26:39.099298
+[2024-08-12 01:26:39,797: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723426000492,"data":{"clientOid":"1206701585364135936","orderId":"1206701585364135937"}}
+[2024-08-12 01:26:39,798: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:26:39,798: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:26:39,806: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:26:39.806743
+[2024-08-12 01:26:40,614: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723426001199,"data":{"clientOid":"1206701588795076608","orderId":"1206701588795076609"}}
+[2024-08-12 01:26:40,614: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:26:40,615: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:26:40,616: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:26:40.616904
+[2024-08-12 01:26:42,048: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723426002659,"data":{"clientOid":"1206701592226013184","orderId":"1206701592226013185"}}
+[2024-08-12 01:26:42,048: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:26:42,049: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:26:47,049: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:26:47,052: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:26:47.052248
+[2024-08-12 01:26:47,057: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:26:47.057177
+[2024-08-12 01:26:47,885: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723426008475,"data":{"clientOid":"1206701585364135936","orderId":"1206701585364135937"}}
+[2024-08-12 01:26:47,886: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:26:47,886: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:26:47,890: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:26:47.890447
+[2024-08-12 01:26:48,707: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723426009308,"data":{"clientOid":"1206701588795076608","orderId":"1206701588795076609"}}
+[2024-08-12 01:26:48,710: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:26:48,710: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:26:48,720: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:26:48.720134
+[2024-08-12 01:26:49,359: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723426010053,"data":{"clientOid":"1206701592226013184","orderId":"1206701592226013185"}}
+[2024-08-12 01:26:49,359: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:26:49,359: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:26:54,360: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:26:54,367: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:26:54.367558
+[2024-08-12 01:26:59,379: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:26:59,382: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:26:59.382150
+[2024-08-12 01:26:59,387: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:26:59.387032
+[2024-08-12 01:27:00,175: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723426020776,"data":{"clientOid":"1206701654595317760","orderId":"1206701654595317761"}}
+[2024-08-12 01:27:00,175: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:27:00,176: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:27:00,180: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:27:00.180257
+[2024-08-12 01:27:00,995: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723426021592,"data":{"clientOid":"1206701660391849984","orderId":"1206701660391849985"}}
+[2024-08-12 01:27:00,995: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:27:00,996: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:27:01,000: WARNING/ForkPoolWorker-7] Getting information for profit_plan with state 1 -> 2024-08-12 01:27:01.000030
+[2024-08-12 01:27:01,811: WARNING/ForkPoolWorker-7] {"code":"00000","msg":"success","requestTime":1723426022419,"data":{"clientOid":"1206701663193640960","orderId":"1206701663193640961"}}
+[2024-08-12 01:27:01,811: WARNING/ForkPoolWorker-7] response_code is 00000
+[2024-08-12 01:27:01,812: WARNING/ForkPoolWorker-7] True
+[2024-08-12 01:27:06,812: WARNING/ForkPoolWorker-7] STARTED TASK
+[2024-08-12 01:27:06,816: WARNING/ForkPoolWorker-7] Time is 2024-08-12 01:27:06.816342
+[2024-08-12 01:27:06,821: WARNING/ForkPoolWorker-7] Getting information for loss_plan with state 1 -> 2024-08-12 01:27:06.821565
+[2024-08-12 01:27:07,751: WARNING/ForkPoolWorker-7] {"code":"43020","msg":"Stop profit and stop loss order does not exist","requestTime":1723426028358,"data":null}
+[2024-08-12 01:27:07,752: WARNING/ForkPoolWorker-7] response_code is 43020
+[2024-08-12 01:27:07,752: WARNING/ForkPoolWorker-7] Changed
+[2024-08-12 01:27:07,778: INFO/ForkPoolWorker-7] Task Logic.tasks.monitoring_sltp_orders[0a617c73-afb5-4417-90ff-26f9f762d454] succeeded in 28.690000859000065s: None
