@@ -33,3 +33,13 @@ class ShortView(APIView):
         return Response(data={"msg": "Okay"}, status=status.HTTP_200_OK)
 
 
+class GetPositionState(APIView):
+
+    def get(self, request):
+        have_any_active_positions = False
+        for trader in Trader.objects.all():
+            if trader.position_set.filter(state=State.Active.value).exists():
+                have_any_active_positions = True
+                break
+
+        return Response(data={"active_position": have_any_active_positions}, status=status.HTTP_200_OK)
