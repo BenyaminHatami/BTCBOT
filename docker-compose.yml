@@ -1,0 +1,66 @@
+version: '3.8'
+
+services:
+  django:
+    build:
+      context: .
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - redis
+      - celery_worker
+      - celery_beat
+      - db
+    env_file:
+      - ./.env
+    restart: always
+
+
+  redis:
+    image: redis:6.2
+    restart: always
+
+  celery_worker:
+    build:
+      context: .
+    command: celery -A BTCBOT worker --loglevel=info --logfile=/var/log/celery/worker.log
+    volumes:
+      - .:/code
+      - ./logs/celery:/var/log/celery
+    depends_on:
+      - redis
+      - db
+    env_file:
+      - ./.env
+    restart: always
+
+  celery_beat:
+    build:
+      context: .
+    command: celery -A BTCBOT beat --loglevel=info --logfile=/var/log/celery/beat.log
+    volumes:
+      - .:/code
+      - ./logs/celery:/var/log/celery
+    depends_on:
+      - redis
+      - db
+    env_file:
+      - ./.env
+    restart: always
+
+  db:
+    image: mysql:8.0
+    restart: always
+    env_file:
+      - ./.env
+    ports:
+      - "3306:3306"
+    volumes:
+      - .:/code
+
+volumes:
+  db_data:

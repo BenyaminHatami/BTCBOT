@@ -1,0 +1,11 @@
+djangorestframework
+django
+requests
+django-extensions
+ipython
+redis
+celery
+django-redis
+mysqlclient
+pymysql
+cryptography
