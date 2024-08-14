@@ -1,6 +1,18 @@
 version: '3.8'
 
 services:
+
+  db:
+    image: mysql:8.0
+    restart: always
+    env_file:
+      - ./.env
+    ports:
+      - "3306:3306"
+    volumes:
+      - './mysql:/var/lib/mysql'
+
+
   django:
     build:
       context: .
@@ -51,16 +63,3 @@ services:
     env_file:
       - ./.env
     restart: always
-
-  db:
-    image: mysql:8.0
-    restart: always
-    env_file:
-      - ./.env
-    ports:
-      - "3306:3306"
-    volumes:
-      - .:/code
-
-volumes:
-  db_data:
