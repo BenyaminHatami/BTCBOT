@@ -39,7 +39,7 @@ services:
   celery_worker:
     build:
       context: .
-    command: celery -A BTCBOT worker --loglevel=info --logfile=/var/log/celery/worker.log -c 10
+    command: celery -A BTCBOT worker --loglevel=info --logfile=/var/log/celery/worker.log -c 15
     volumes:
       - .:/code
       - ./logs/celery:/var/log/celery

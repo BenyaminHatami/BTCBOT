@@ -4,3 +4,6 @@ logs/
 .venv/
 celerybeat-schedule
 mysql/
+BTCBOT/__pycache__/
+Logic/__pycache__/
+
