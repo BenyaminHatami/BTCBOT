@@ -63,7 +63,6 @@ def monitoring_sltp_orders(position_id: int):
         print("STARTED TASK")
         position = Position.objects.get(id=position_id)
         price = position.positionaction_set.last().price
-        print(f"Time is {datetime.now()}")
         active_sltp_orders = position.sltporder_set.filter(state=State.Active.value)
         if len(active_sltp_orders) == 0:
             break
@@ -75,6 +74,7 @@ def monitoring_sltp_orders(position_id: int):
             position.inactivate_all_sltp_orders()
             position.state = State.Inactive.value
             position.quantity -= sl.quantity
+            position.add_comment(f"Quantity decreased duo to stop loss with quantity: {sl.quantity}")
             position.save(update_fields=["state", "quantity", "updated"])
             return
 
@@ -90,11 +90,13 @@ def monitoring_sltp_orders(position_id: int):
                         sl.change_trigger_price(new_trigger_price=price * Decimal("0.995"))
                         tp.inactivate()
                         position.quantity -= tp.quantity
+                        position.add_comment(f"Quantity decreased duo to first tp with quantity: {tp.quantity}")
                         position.save(update_fields=["quantity", "updated"])
                     elif inactivated and i == 1:
                         position.inactivate_all_sltp_orders()
                         position.state = State.Inactive.value
                         position.quantity -= tp.quantity
+                        position.add_comment(f"Quantity decreased duo to second tp with quantity: {tp.quantity}")
                         position.save(update_fields=["state", "quantity", "updated"])
                         return
             elif number_of_tps == 1:
@@ -104,6 +106,7 @@ def monitoring_sltp_orders(position_id: int):
                     position.inactivate_all_sltp_orders()
                     position.state = State.Inactive.value
                     position.quantity -= tp.quantity
+                    position.add_comment(f"Quantity decreased duo to the only tp with quantity: {tp.quantity}")
                     position.save(update_fields=["state", "quantity", "updated"])
                     return
             else:
@@ -121,11 +124,13 @@ def monitoring_sltp_orders(position_id: int):
                         sl.change_trigger_price(new_trigger_price=price * Decimal("1.005"))
                         tp.inactivate()
                         position.quantity -= tp.quantity
+                        position.add_comment(f"Quantity decreased duo to first tp with quantity: {tp.quantity}")
                         position.save(update_fields=["quantity", "updated"])
                     elif inactivated and i == 1:
                         position.inactivate_all_sltp_orders()
                         position.state = State.Inactive.value
                         position.quantity -= tp.quantity
+                        position.add_comment(f"Quantity decreased duo to second tp with quantity: {tp.quantity}")
                         position.save(update_fields=["state", "quantity", "updated"])
                         return
             elif number_of_tps == 1:
@@ -135,6 +140,7 @@ def monitoring_sltp_orders(position_id: int):
                     position.inactivate_all_sltp_orders()
                     position.state = State.Inactive.value
                     position.quantity -= tp.quantity
+                    position.add_comment(f"Quantity decreased duo to the only tp with quantity: {tp.quantity}")
                     position.save(update_fields=["state", "quantity", "updated"])
                     return
             else:

@@ -1,15 +1,16 @@
-from datetime import datetime
+from datetime import datetime, timezone
 from decimal import Decimal
 from enum import Enum
 
 from django.core.cache import cache
 from django.db import models, transaction
 import requests
-import os
 import time
 import hmac
-import hashlib
 import base64
+
+from django.db.models import Value
+from django.db.models.functions import Concat
 
 from .tasks import monitoring_sltp_orders
 from .utils import get_param, interpret_response
@@ -79,10 +80,30 @@ class State(Enum):
 class BaseModel(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
-    trace = models.TextField(null=True, blank=True)
+    trace = models.TextField(null=True, blank=True, default="")
 
     class Meta:
         abstract = True
+
+    def add_comment(self, comment):
+        self.__class__.objects.filter(id=self.id).update(
+            trace=Concat('trace', Value(f'{comment}\n')),
+            updated=datetime.now(tz=timezone.utc))
+
+
+def write_at_cache(id, message, comment):
+    cache.set(id, message)
+    print(comment)
+
+
+def read_from_cache(id, comment):
+    try:
+        read = cache.get(id)
+        print(f"{comment}\nRead {read} from cache.")
+        return read
+    except Exception as e:
+        print(f"Got exception in reading from cache: {str(e)}")
+        return None
 
 
 class Trader(BaseModel):
@@ -293,7 +314,6 @@ class Trader(BaseModel):
         tp_price_1 = position_action.price * Decimal("1.01")
         tp_price_2 = position_action.price * Decimal("1.02")
 
-        print(position.quantity)
         sl_order = SLTPOrder.create_new_sltp_order(trader=self, position=position, coin=Coin.btc_futures.value,
                                                    trigger_price=sl_price, quantity=position.quantity,
                                                    plan_type=PlanType.sl.value)
@@ -306,11 +326,10 @@ class Trader(BaseModel):
                                                      quantity=position.quantity / Decimal("2"),
                                                      plan_type=PlanType.tp.value)
         monitoring_sltp_orders.apply_async(args=[position.id])
-        # check_position_one_hour_later.apply_async(args=[position.id])
 
     def _create_second_time_go_long(self, position):
+        write_at_cache(position.id, "changing", f"second_time_go_long for {self.name}")
         position.expand_position(quantity=position.quantity)
-        print(f" mewooa  {position.state}")
         position.cancel_all_sltp_orders()
         position_action = position.positionaction_set.last()
         sl_price = position_action.price * Decimal("0.991")
@@ -327,6 +346,7 @@ class Trader(BaseModel):
                                                      trigger_price=tp_price_2,
                                                      quantity=position.quantity / Decimal("2"),
                                                      plan_type=PlanType.tp.value)
+        write_at_cache(position.id, "finished", f"second_time_go_long finished for {self.name}")
 
     def _create_first_time_go_short(self):
         position = Position.create_new_position(trader=self, coin=Coin.btc_futures.value,
@@ -352,6 +372,7 @@ class Trader(BaseModel):
         # check_position_one_hour_later.apply_async(args=[position.id])
 
     def _create_second_time_go_short(self, position):
+        write_at_cache(position.id, "changing", f"second_time_go_long for {self.name}")
         position.expand_position(quantity=position.quantity)
         position.cancel_all_sltp_orders()
         position_action = position.positionaction_set.last()
@@ -369,6 +390,7 @@ class Trader(BaseModel):
                                                      trigger_price=tp_price_2,
                                                      quantity=position.quantity / Decimal("2"),
                                                      plan_type=PlanType.tp.value)
+        write_at_cache(position.id, "finished", f"second_time_go_long finished for {self.name}")
 
     def get_long_sign(self):
         active_positions = self.position_set.filter(state=State.Active.value)
@@ -451,23 +473,23 @@ class Position(BaseModel):
                                                             )
             pos_quantity = self.quantity
             if self.is_ever_updated is False:
+                self.add_comment(f"Created position quantity: {quantity}, side: {side}")
                 self.is_ever_updated = True
             else:
                 if side == SideFutures.open_long.value or side == SideFutures.open_short.value:
                     pos_quantity += quantity
+                    self.add_comment(f"Add quantity: {quantity} in update position.")
                 elif side == SideFutures.close_long.value or side == SideFutures.close_short.value:
                     pos_quantity -= quantity
+                    self.add_comment(f"Decrease quantity: {quantity} in update position.")
                 else:
                     pass
 
-            print(f"quantity: {quantity}")
-            print(f"pos_quantity: {pos_quantity}")
             if pos_quantity <= 0:
                 self.state = State.Inactive.value
             self.quantity = pos_quantity
             self.pnl += profit + fee
             self.save(update_fields=["quantity", "pnl", "is_ever_updated", "state", "updated"])
-            print(f"STATE NOW IS {self.state}")
             return position_action
 
     @staticmethod
@@ -487,6 +509,8 @@ class Position(BaseModel):
             order.inactivate()
 
     def close_position(self):
+        write_at_cache(self.id, "changing", f"close position started for {self.trader.name}")
+        self.add_comment("Close position started")
         side = SideFutures.close_long.value if self.direction == PositionDirection.long.value else\
             SideFutures.close_short.value
         remote_id = self.trader.futures_trade(coin=self.coin, quantity=self.quantity, side=side)
@@ -494,6 +518,8 @@ class Position(BaseModel):
         self.inactivate_all_sltp_orders()
         self.state = State.Inactive.value
         self.save(update_fields=['state', 'updated'])
+        write_at_cache(self.id, "finished", f"closed position finished for {self.trader.name}")
+        self.add_comment("Position closed")
 
     def expand_position(self, quantity: Decimal):
         side = SideFutures.open_long.value if self.direction == PositionDirection.long.value else \
@@ -501,13 +527,17 @@ class Position(BaseModel):
         remote_id = self.trader.futures_trade(coin=self.coin, quantity=quantity, side=side)
         self.number_of_openings += 1
         self.save(update_fields=["number_of_openings", "updated"])
+        self.add_comment(f"Expanding position with quantity: {quantity}")
         position_action = self.update_position_and_create_position_action(remote_id=remote_id)
         return position_action
 
     def cancel_all_sltp_orders(self):
+        self.add_comment("Start cancelling all sltp orders.")
         sltp_orders = self.sltporder_set.filter(state=State.Active.value)
         for sltp_order in sltp_orders:
             sltp_order.cancel_sltp_order()
+
+        self.add_comment("All sltp orders canceled")
 
 
 class PositionAction(BaseModel):
@@ -559,6 +589,8 @@ class SLTPOrder(BaseModel):
         sltp_order = SLTPOrder.objects.create(trader=trader, position=position, coin=coin,
                                               remote_id=remote_id, quantity=quantity, plan_type=plan_type,
                                               trigger_price=trigger_price, state=State.Active.value)
+        sltp_order.position.add_comment(f"Created with quantity: {sltp_order.quantity} at trigger price: "
+                                        f"{sltp_order.trigger_price}")
         return sltp_order
 
     def change_trigger_price(self, new_trigger_price: Decimal):
@@ -568,32 +600,30 @@ class SLTPOrder(BaseModel):
             self.save(update_fields=["trigger_price", "updated"])
 
     def cancel_sltp_order(self):
-        cache.set(self.id, "pending")
         canceled = self.trader.cancel_sltp(sltporder=self)
         if canceled:
             self.inactivate()
 
-        print(f"NOW the state is {self.state} -> {datetime.now()}")
-
     def get_information(self):
-        try:
-            present_state = cache.get(self.id)
-            if present_state == "pending" or present_state == "inactivated":
-                return False
-        except Exception as ve:
-            print(ve)
+        state = read_from_cache(self.position.id, f"{self.trader.name} {self.plan_type}")
+        if state == "changing":
+            return False
         self.refresh_from_db()
-        print(f"Getting information for {self.plan_type} with state {self.state} -> {datetime.now()}")
+        print(f"Getting information for {self.trader.name} {self.plan_type} with state {self.state} -> {datetime.now()}")
         if self.state != State.Active.value:
             return False
-        modified = self.trader.modify_sltp(sltporder=self, trigger_price=self.trigger_price)
-        print(modified)
-        if modified == "Changed":
-            self.inactivate()
-            return True
-        return False
+        try:
+            modified = self.trader.modify_sltp(sltporder=self, trigger_price=self.trigger_price)
+            print(modified)
+            if modified == "Changed":
+                self.inactivate()
+                return True
+            return False
+        except Exception as e:
+            print(e)
+            return False
 
     def inactivate(self):
         self.state = State.Inactive.value
         self.save(update_fields=["state", "updated"])
-        cache.set(self.id, "inactivated")
+        self.position.add_comment(f"{self.plan_type} order inactivated.")
