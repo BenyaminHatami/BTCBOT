@@ -37,9 +37,13 @@ class GetPositionState(APIView):
 
     def get(self, request):
         have_any_active_positions = False
+        position_type = None
         for trader in Trader.objects.all():
-            if trader.position_set.filter(state=State.Active.value).exists():
+            position: Position = trader.position_set.filter(state=State.Active.value).last()
+            if position:
                 have_any_active_positions = True
+                position_type = position.direction
                 break
 
-        return Response(data={"active_position": have_any_active_positions}, status=status.HTTP_200_OK)
+        return Response(data={"active_position": have_any_active_positions, "position_type": position_type},
+                        status=status.HTTP_200_OK)
