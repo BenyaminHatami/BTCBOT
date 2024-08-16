@@ -310,7 +310,7 @@ class Trader(BaseModel):
         position = Position.create_new_position(trader=self, coin=Coin.btc_futures.value,
                                                 quantity=Decimal("0.002"), side=SideFutures.open_long.value)
         position_action = position.positionaction_set.last()
-        sl_price = position_action.price * Decimal("0.995")
+        sl_price = position_action.price * Decimal("0.991")
         tp_price_1 = position_action.price * Decimal("1.01")
         tp_price_2 = position_action.price * Decimal("1.02")
 
@@ -352,7 +352,7 @@ class Trader(BaseModel):
         position = Position.create_new_position(trader=self, coin=Coin.btc_futures.value,
                                                 quantity=Decimal("0.002"), side=SideFutures.open_short.value)
         position_action = position.positionaction_set.last()
-        sl_price = position_action.price * Decimal("1.005")
+        sl_price = position_action.price * Decimal("1.009")
         tp_price_1 = position_action.price * Decimal("0.99")
         tp_price_2 = position_action.price * Decimal("0.98")
 

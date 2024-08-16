@@ -87,7 +87,7 @@ def monitoring_sltp_orders(position_id: int):
                     tp = sorted_tps[i]
                     inactivated = tp.get_information()
                     if inactivated and i == 0:
-                        sl.change_trigger_price(new_trigger_price=price * Decimal("0.995"))
+                        sl.change_trigger_price(new_trigger_price=price)
                         tp.inactivate()
                         position.quantity -= tp.quantity
                         position.add_comment(f"Quantity decreased duo to first tp with quantity: {tp.quantity}")
@@ -121,7 +121,7 @@ def monitoring_sltp_orders(position_id: int):
                     tp = sorted_tps[i]
                     inactivated = tp.get_information()
                     if inactivated and i == 0:
-                        sl.change_trigger_price(new_trigger_price=price * Decimal("1.005"))
+                        sl.change_trigger_price(new_trigger_price=price)
                         tp.inactivate()
                         position.quantity -= tp.quantity
                         position.add_comment(f"Quantity decreased duo to first tp with quantity: {tp.quantity}")
