@@ -187,6 +187,60 @@ class Trader(BaseModel):
         print(response.text)
         return remote_id
 
+    def futures_trade_limit(self, coin: Coin.type, quantity: Decimal, side: SideFutures.type, price: Decimal = None):
+        method = "POST"
+        request_path = "/api/mix/v1/order/placeOrder"
+        number_of_tries = 3
+        try:
+            for _ in range(number_of_tries):
+                try:
+                    if price is None:
+                        price = self.get_price(coin)
+                except Exception as e:
+                    continue
+
+                body = (f'{{"side":"{side}",'
+                        f'"symbol":"{coin}",'
+                        f'"orderType":"limit",'
+                        f'"marginCoin":"USDT",'
+                        f'"price":"{price}",'
+                        f'"size":"{quantity}"}}')
+
+                headers = self.create_header(method=method, request_path=request_path, body=body)
+                response = requests.post(url="https://api.coincatch.com/api/mix/v1/order/placeOrder",
+                                         data=body,
+                                         headers=headers)
+                remote_id = interpret_response(response.json(), "orderId")
+
+                time.sleep(10)
+
+                state_of_order = self.get_order_information(coin=coin, remote_id=remote_id)
+                if state_of_order is None or state_of_order == 'new':
+                    canceled_response = self.cancel_order(coin=coin, remote_id=remote_id)
+                    if canceled_response == '00000':
+                        continue
+                    else:
+                        raise Exception(f"In canceling limit order got {canceled_response}")
+                elif state_of_order == 'filled':
+                    return remote_id
+                else:
+                    raise Exception(f"State of order is {state_of_order}")
+        except Exception as e:
+            print(e)
+        return self.futures_trade(coin, quantity, side)
+
+    def cancel_order(self, coin: Coin.type, remote_id):
+        method = "POST"
+        request_path = "/api/mix/v1/order/cancel-order"
+        body = (f'{{"orderId":"{remote_id}",'
+                f'"symbol":"{coin}",'
+                f'"marginCoin":"USDT"}}')
+
+        headers = self.create_header(method=method, request_path=request_path, body=body)
+        response = requests.post(url="https://api.coincatch.com/api/mix/v1/order/cancel-order",
+                                 data=body,
+                                 headers=headers)
+        return response.json().get('code', None)
     # def change_leverage(self, coin: Coin, leverage: int, direction: PositionDirection):
     #     method = "POST"
     #     request_path = "/api/mix/v1/account/setLeverage"
@@ -297,14 +351,19 @@ class Trader(BaseModel):
         }
         return output
 
-    def get_sltp_order_information(self, coin: Coin.type, remote_id: str):
+    def get_order_information(self, coin: Coin.type, remote_id: str):
         method = "GET"
         request_path = "/api/mix/v1/order/detail"
         query_string = f'symbol={coin}&orderId={remote_id}'
         headers = self.create_header(method=method, request_path=request_path, query_string=query_string)
         response = requests.get(url="https://api.coincatch.com/api/mix/v1/order/detail" + "?" + query_string,
                                 headers=headers)
-        print(response.json())
+        response_data = response.json().get('data', None)
+        if response_data:
+            state = response_data.get('state', None)
+            return state
+        else:
+            return None
 
     def _create_first_time_go_long(self):
         position = Position.create_new_position(trader=self, coin=Coin.btc_futures.value,
@@ -494,7 +553,7 @@ class Position(BaseModel):
 
     @staticmethod
     def create_new_position(trader: Trader, coin: Coin.type, quantity: Decimal, side: SideFutures.type):
-        remote_id = trader.futures_trade(coin=coin, quantity=quantity, side=side)
+        remote_id = trader.futures_trade_limit(coin=coin, quantity=quantity, side=side)
         position = Position.objects.create(trader=trader, coin=coin, quantity=quantity, state=State.Active.value,
                                            direction=SideFutures.get_position_direction(side))
         position.update_position_and_create_position_action(remote_id=remote_id)
@@ -513,7 +572,7 @@ class Position(BaseModel):
         self.add_comment("Close position started")
         side = SideFutures.close_long.value if self.direction == PositionDirection.long.value else\
             SideFutures.close_short.value
-        remote_id = self.trader.futures_trade(coin=self.coin, quantity=self.quantity, side=side)
+        remote_id = self.trader.futures_trade_limit(coin=self.coin, quantity=self.quantity, side=side)
         self.update_position_and_create_position_action(remote_id=remote_id)
         self.inactivate_all_sltp_orders()
         self.state = State.Inactive.value
@@ -524,7 +583,7 @@ class Position(BaseModel):
     def expand_position(self, quantity: Decimal):
         side = SideFutures.open_long.value if self.direction == PositionDirection.long.value else \
             SideFutures.open_short.value
-        remote_id = self.trader.futures_trade(coin=self.coin, quantity=quantity, side=side)
+        remote_id = self.trader.futures_trade_limit(coin=self.coin, quantity=quantity, side=side)
         self.number_of_openings += 1
         self.save(update_fields=["number_of_openings", "updated"])
         self.add_comment(f"Expanding position with quantity: {quantity}")
