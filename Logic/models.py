@@ -392,8 +392,8 @@ class Trader(BaseModel):
         position.cancel_all_sltp_orders()
         position_action = position.positionaction_set.last()
         sl_price = position_action.price * Decimal("0.991")
-        tp_price_1 = position_action.price * Decimal("1.01")
-        tp_price_2 = position_action.price * Decimal("1.02")
+        tp_price_1 = position_action.price * Decimal("1.009")
+        tp_price_2 = position_action.price * Decimal("1.018")
         sl_order = SLTPOrder.create_new_sltp_order(trader=self, position=position, coin=Coin.btc_futures.value,
                                                    trigger_price=sl_price, quantity=position.quantity,
                                                    plan_type=PlanType.sl.value)
@@ -412,8 +412,8 @@ class Trader(BaseModel):
                                                 quantity=Decimal("0.002"), side=SideFutures.open_short.value)
         position_action = position.positionaction_set.last()
         sl_price = position_action.price * Decimal("1.009")
-        tp_price_1 = position_action.price * Decimal("0.99")
-        tp_price_2 = position_action.price * Decimal("0.98")
+        tp_price_1 = position_action.price * Decimal("0.991")
+        tp_price_2 = position_action.price * Decimal("0.982")
 
         sl_order = SLTPOrder.create_new_sltp_order(trader=self, position=position, coin=Coin.btc_futures.value,
                                                    trigger_price=sl_price, quantity=position.quantity,
