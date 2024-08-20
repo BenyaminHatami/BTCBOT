@@ -553,7 +553,7 @@ class Position(BaseModel):
 
     @staticmethod
     def create_new_position(trader: Trader, coin: Coin.type, quantity: Decimal, side: SideFutures.type):
-        remote_id = trader.futures_trade_limit(coin=coin, quantity=quantity, side=side)
+        remote_id = trader.futures_trade(coin=coin, quantity=quantity, side=side)
         position = Position.objects.create(trader=trader, coin=coin, quantity=quantity, state=State.Active.value,
                                            direction=SideFutures.get_position_direction(side))
         position.update_position_and_create_position_action(remote_id=remote_id)
@@ -572,7 +572,7 @@ class Position(BaseModel):
         self.add_comment("Close position started")
         side = SideFutures.close_long.value if self.direction == PositionDirection.long.value else\
             SideFutures.close_short.value
-        remote_id = self.trader.futures_trade_limit(coin=self.coin, quantity=self.quantity, side=side)
+        remote_id = self.trader.futures_trade(coin=self.coin, quantity=self.quantity, side=side)
         self.update_position_and_create_position_action(remote_id=remote_id)
         self.inactivate_all_sltp_orders()
         self.state = State.Inactive.value
@@ -583,7 +583,7 @@ class Position(BaseModel):
     def expand_position(self, quantity: Decimal):
         side = SideFutures.open_long.value if self.direction == PositionDirection.long.value else \
             SideFutures.open_short.value
-        remote_id = self.trader.futures_trade_limit(coin=self.coin, quantity=quantity, side=side)
+        remote_id = self.trader.futures_trade(coin=self.coin, quantity=quantity, side=side)
         self.number_of_openings += 1
         self.save(update_fields=["number_of_openings", "updated"])
         self.add_comment(f"Expanding position with quantity: {quantity}")
