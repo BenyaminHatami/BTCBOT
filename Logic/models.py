@@ -514,6 +514,7 @@ class Position(BaseModel):
         return f'{self.trader.name} {self.direction}'
 
     def update_position_and_create_position_action(self, remote_id: str):
+        print(f"remote_id for trader {self.trader.name} is {remote_id}")
         order_detail = self.trader.get_position_order_information(coin=self.coin, remote_id=remote_id)
         price = Decimal(order_detail.get('price'))
         fee = Decimal(order_detail.get('fee'))
