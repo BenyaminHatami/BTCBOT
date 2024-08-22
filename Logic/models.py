@@ -185,6 +185,8 @@ class Trader(BaseModel):
                                  headers=headers)
         remote_id = interpret_response(response.json(), "orderId")
         print(response.text)
+        print(type(remote_id))
+        print("remote_id is {remote_id} for {self.name} right after futures_trade")
         return remote_id
 
     def futures_trade_limit(self, coin: Coin.type, quantity: Decimal, side: SideFutures.type, price: Decimal = None):
@@ -515,7 +517,7 @@ class Position(BaseModel):
 
     def update_position_and_create_position_action(self, remote_id: str):
         print(f"remote_id for trader {self.trader.name} is {remote_id}")
-        time.sleep(0.5)
+        time.sleep(2)
         order_detail = self.trader.get_position_order_information(coin=self.coin, remote_id=remote_id)
         price = Decimal(order_detail.get('price'))
         fee = Decimal(order_detail.get('fee'))
@@ -556,6 +558,7 @@ class Position(BaseModel):
     @staticmethod
     def create_new_position(trader: Trader, coin: Coin.type, quantity: Decimal, side: SideFutures.type):
         remote_id = trader.futures_trade(coin=coin, quantity=quantity, side=side)
+        print(f"remote_id is {remote_id} for {trader.name} in creating new_position")
         position = Position.objects.create(trader=trader, coin=coin, quantity=quantity, state=State.Active.value,
                                            direction=SideFutures.get_position_direction(side))
         position.update_position_and_create_position_action(remote_id=remote_id)
@@ -586,6 +589,7 @@ class Position(BaseModel):
         side = SideFutures.open_long.value if self.direction == PositionDirection.long.value else \
             SideFutures.open_short.value
         remote_id = self.trader.futures_trade(coin=self.coin, quantity=quantity, side=side)
+        print(f"remote_id is {remote_id} for {self.trader.nema} in expanding position.")
         self.number_of_openings += 1
         self.save(update_fields=["number_of_openings", "updated"])
         self.add_comment(f"Expanding position with quantity: {quantity}")
