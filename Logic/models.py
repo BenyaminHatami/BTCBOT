@@ -186,7 +186,7 @@ class Trader(BaseModel):
         remote_id = interpret_response(response.json(), "orderId")
         print(response.text)
         print(type(remote_id))
-        print("remote_id is {remote_id} for {self.name} right after futures_trade")
+        print(f"remote_id is {remote_id} for {self.name} right after futures_trade")
         return remote_id
 
     def futures_trade_limit(self, coin: Coin.type, quantity: Decimal, side: SideFutures.type, price: Decimal = None):
@@ -589,7 +589,7 @@ class Position(BaseModel):
         side = SideFutures.open_long.value if self.direction == PositionDirection.long.value else \
             SideFutures.open_short.value
         remote_id = self.trader.futures_trade(coin=self.coin, quantity=quantity, side=side)
-        print(f"remote_id is {remote_id} for {self.trader.nema} in expanding position.")
+        print(f"remote_id is {remote_id} for {self.trader.name} in expanding position.")
         self.number_of_openings += 1
         self.save(update_fields=["number_of_openings", "updated"])
         self.add_comment(f"Expanding position with quantity: {quantity}")
