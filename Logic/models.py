@@ -369,64 +369,80 @@ class Trader(BaseModel):
 
     def _create_first_time_go_long(self):
         position = Position.create_new_position(trader=self, coin=Coin.btc_futures.value,
-                                                quantity=Decimal("0.002"), side=SideFutures.open_long.value)
+                                                quantity=Decimal("0.003"), side=SideFutures.open_long.value)
         position_action = position.positionaction_set.last()
         sl_price = position_action.price * Decimal("0.991")
-        tp_price_1 = position_action.price * Decimal("1.01")
-        tp_price_2 = position_action.price * Decimal("1.02")
+        tp_price_1 = position_action.price * Decimal("1.005")
+        tp_price_2 = position_action.price * Decimal("1.01")
+        tp_price_3 = position_action.price * Decimal("1.02")
 
         sl_order = SLTPOrder.create_new_sltp_order(trader=self, position=position, coin=Coin.btc_futures.value,
                                                    trigger_price=sl_price, quantity=position.quantity,
                                                    plan_type=PlanType.sl.value)
         tp_order_1 = SLTPOrder.create_new_sltp_order(trader=self, position=position, coin=Coin.btc_futures.value,
                                                      trigger_price=tp_price_1,
-                                                     quantity=position.quantity / Decimal("2"),
+                                                     quantity=position.quantity / Decimal("3"),
                                                      plan_type=PlanType.tp.value)
         tp_order_2 = SLTPOrder.create_new_sltp_order(trader=self, position=position, coin=Coin.btc_futures.value,
                                                      trigger_price=tp_price_2,
-                                                     quantity=position.quantity / Decimal("2"),
+                                                     quantity=position.quantity / Decimal("3"),
+                                                     plan_type=PlanType.tp.value)
+        tp_order_3 = SLTPOrder.create_new_sltp_order(trader=self, position=position, coin=Coin.btc_futures.value,
+                                                     trigger_price=tp_price_3,
+                                                     quantity=position.quantity / Decimal("3"),
                                                      plan_type=PlanType.tp.value)
         monitoring_sltp_orders.apply_async(args=[position.id])
 
     def _create_second_time_go_long(self, position):
         write_at_cache(position.id, "changing", f"second_time_go_long for {self.name}")
-        position.expand_position(quantity=position.quantity)
+        position.expand_position(quantity=Decimal("0.003"))
         position.cancel_all_sltp_orders()
         position_action = position.positionaction_set.last()
         sl_price = position_action.price * Decimal("0.991")
-        tp_price_1 = position_action.price * Decimal("1.009")
-        tp_price_2 = position_action.price * Decimal("1.018")
+        tp_price_1 = position_action.price * Decimal("1.0045")
+        tp_price_2 = position_action.price * Decimal("1.009")
+        tp_price_3 = position_action.price * Decimal("1.018")
         sl_order = SLTPOrder.create_new_sltp_order(trader=self, position=position, coin=Coin.btc_futures.value,
                                                    trigger_price=sl_price, quantity=position.quantity,
                                                    plan_type=PlanType.sl.value)
         tp_order_1 = SLTPOrder.create_new_sltp_order(trader=self, position=position, coin=Coin.btc_futures.value,
                                                      trigger_price=tp_price_1,
-                                                     quantity=position.quantity / Decimal("2"),
+                                                     quantity=Decimal("0.002"),
                                                      plan_type=PlanType.tp.value)
         tp_order_2 = SLTPOrder.create_new_sltp_order(trader=self, position=position, coin=Coin.btc_futures.value,
                                                      trigger_price=tp_price_2,
-                                                     quantity=position.quantity / Decimal("2"),
+                                                     quantity=Decimal("0.002"),
                                                      plan_type=PlanType.tp.value)
+        if position.quantity > Decimal("0.0041"):
+            tp_order_3 = SLTPOrder.create_new_sltp_order(trader=self, position=position, coin=Coin.btc_futures.value,
+                                                         trigger_price=tp_price_3,
+                                                         quantity=position.quantity - Decimal("0.004"),
+                                                         plan_type=PlanType.tp.value)
         write_at_cache(position.id, "finished", f"second_time_go_long finished for {self.name}")
 
     def _create_first_time_go_short(self):
         position = Position.create_new_position(trader=self, coin=Coin.btc_futures.value,
-                                                quantity=Decimal("0.002"), side=SideFutures.open_short.value)
+                                                quantity=Decimal("0.003"), side=SideFutures.open_short.value)
         position_action = position.positionaction_set.last()
         sl_price = position_action.price * Decimal("1.009")
-        tp_price_1 = position_action.price * Decimal("0.991")
-        tp_price_2 = position_action.price * Decimal("0.982")
+        tp_price_1 = position_action.price * Decimal("0.995")
+        tp_price_2 = position_action.price * Decimal("0.99")
+        tp_price_3 = position_action.price * Decimal("0.98")
 
         sl_order = SLTPOrder.create_new_sltp_order(trader=self, position=position, coin=Coin.btc_futures.value,
                                                    trigger_price=sl_price, quantity=position.quantity,
                                                    plan_type=PlanType.sl.value)
         tp_order_1 = SLTPOrder.create_new_sltp_order(trader=self, position=position, coin=Coin.btc_futures.value,
                                                      trigger_price=tp_price_1,
-                                                     quantity=position.quantity / Decimal("2"),
+                                                     quantity=position.quantity / Decimal("3"),
                                                      plan_type=PlanType.tp.value)
         tp_order_2 = SLTPOrder.create_new_sltp_order(trader=self, position=position, coin=Coin.btc_futures.value,
                                                      trigger_price=tp_price_2,
-                                                     quantity=position.quantity / Decimal("2"),
+                                                     quantity=position.quantity / Decimal("3"),
+                                                     plan_type=PlanType.tp.value)
+        tp_order_3 = SLTPOrder.create_new_sltp_order(trader=self, position=position, coin=Coin.btc_futures.value,
+                                                     trigger_price=tp_price_3,
+                                                     quantity=position.quantity / Decimal("3"),
                                                      plan_type=PlanType.tp.value)
 
         monitoring_sltp_orders.apply_async(args=[position.id])
@@ -434,23 +450,29 @@ class Trader(BaseModel):
 
     def _create_second_time_go_short(self, position):
         write_at_cache(position.id, "changing", f"second_time_go_long for {self.name}")
-        position.expand_position(quantity=position.quantity)
+        position.expand_position(quantity=Decimal("0.003"))
         position.cancel_all_sltp_orders()
         position_action = position.positionaction_set.last()
         sl_price = position_action.price * Decimal("1.009")
-        tp_price_1 = position_action.price * Decimal("0.99")
-        tp_price_2 = position_action.price * Decimal("0.98")
+        tp_price_1 = position_action.price * Decimal("0.9955")
+        tp_price_2 = position_action.price * Decimal("0.991")
+        tp_price_3 = position_action.price * Decimal("0.982")
         sl_order = SLTPOrder.create_new_sltp_order(trader=self, position=position, coin=Coin.btc_futures.value,
                                                    trigger_price=sl_price, quantity=position.quantity,
                                                    plan_type=PlanType.sl.value)
         tp_order_1 = SLTPOrder.create_new_sltp_order(trader=self, position=position, coin=Coin.btc_futures.value,
                                                      trigger_price=tp_price_1,
-                                                     quantity=position.quantity / Decimal("2"),
+                                                     quantity=Decimal("0.002"),
                                                      plan_type=PlanType.tp.value)
         tp_order_2 = SLTPOrder.create_new_sltp_order(trader=self, position=position, coin=Coin.btc_futures.value,
                                                      trigger_price=tp_price_2,
-                                                     quantity=position.quantity / Decimal("2"),
+                                                     quantity=Decimal("0.002"),
                                                      plan_type=PlanType.tp.value)
+        if position.quantity > Decimal("0.0041"):
+            tp_order_3 = SLTPOrder.create_new_sltp_order(trader=self, position=position, coin=Coin.btc_futures.value,
+                                                         trigger_price=tp_price_3,
+                                                         quantity=position.quantity - Decimal("0.004"),
+                                                         plan_type=PlanType.tp.value)
         write_at_cache(position.id, "finished", f"second_time_go_long finished for {self.name}")
 
     def get_long_sign(self):

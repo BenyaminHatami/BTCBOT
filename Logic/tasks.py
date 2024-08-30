@@ -81,8 +81,30 @@ def monitoring_sltp_orders(position_id: int):
         if position.direction == PositionDirection.long.value:
             sorted_tps = active_sltp_orders.filter(plan_type=PlanType.tp.value).order_by('trigger_price')
             number_of_tps = len(sorted_tps)
-            assert number_of_tps <= 2
-            if number_of_tps == 2:
+            assert number_of_tps <= 3
+            if number_of_tps == 3:
+                for i in range(3):
+                    tp = sorted_tps[i]
+                    inactivated = tp.get_information()
+                    if inactivated and i == 0:
+                        tp.inactivate()
+                        position.quantity -= tp.quantity
+                        position.add_comment(f"Quantity decreased duo to first tp with quantity: {tp.quantity}")
+                        position.save(update_fields=["quantity", "updated"])
+                    elif inactivated and i == 1:
+                        sl.change_trigger_price(new_trigger_price=price)
+                        tp.inactivate()
+                        position.quantity -= tp.quantity
+                        position.add_comment(f"Quantity decreased duo to second tp with quantity: {tp.quantity}")
+                        position.save(update_fields=["quantity", "updated"])
+                    elif inactivated and i == 2:
+                        position.inactivate_all_sltp_orders()
+                        position.state = State.Inactive.value
+                        position.quantity -= tp.quantity
+                        position.add_comment(f"Quantity decreased duo to third tp with quantity: {tp.quantity}")
+                        position.save(update_fields=["state", "quantity", "updated"])
+                        return
+            elif number_of_tps == 2:
                 for i in range(2):
                     tp = sorted_tps[i]
                     inactivated = tp.get_information()
@@ -115,8 +137,30 @@ def monitoring_sltp_orders(position_id: int):
         elif position.direction == PositionDirection.short.value:
             sorted_tps = active_sltp_orders.filter(plan_type=PlanType.tp.value).order_by('-trigger_price')
             number_of_tps = len(sorted_tps)
-            assert number_of_tps <= 2
-            if number_of_tps == 2:
+            assert number_of_tps <= 3
+            if number_of_tps == 3:
+                for i in range(3):
+                    tp = sorted_tps[i]
+                    inactivated = tp.get_information()
+                    if inactivated and i == 0:
+                        tp.inactivate()
+                        position.quantity -= tp.quantity
+                        position.add_comment(f"Quantity decreased duo to first tp with quantity: {tp.quantity}")
+                        position.save(update_fields=["quantity", "updated"])
+                    elif inactivated and i == 1:
+                        sl.change_trigger_price(new_trigger_price=price)
+                        tp.inactivate()
+                        position.quantity -= tp.quantity
+                        position.add_comment(f"Quantity decreased duo to second tp with quantity: {tp.quantity}")
+                        position.save(update_fields=["quantity", "updated"])
+                    elif inactivated and i == 2:
+                        position.inactivate_all_sltp_orders()
+                        position.state = State.Inactive.value
+                        position.quantity -= tp.quantity
+                        position.add_comment(f"Quantity decreased duo to third tp with quantity: {tp.quantity}")
+                        position.save(update_fields=["state", "quantity", "updated"])
+                        return
+            elif number_of_tps == 2:
                 for i in range(2):
                     tp = sorted_tps[i]
                     inactivated = tp.get_information()
