@@ -393,7 +393,7 @@ class Trader(BaseModel):
                                                      plan_type=PlanType.tp.value)
         monitoring_sltp_orders.apply_async(args=[position.id])
 
-    def _calculate_second_time_price(self, position: Position, position_previous_quantity):
+    def _calculate_second_time_price(self, position, position_previous_quantity):
         position_actions = position.positionaction_set
         return (position_previous_quantity * position_actions.first().price +
                 Decimal("0.003") * position_actions.last().price) / (position_previous_quantity + Decimal("0.003"))
