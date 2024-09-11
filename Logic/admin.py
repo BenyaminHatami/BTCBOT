@@ -11,6 +11,13 @@ class TraderAdmin(admin.ModelAdmin):
 class PositionAdmin(admin.ModelAdmin):
     list_display = ("created", "updated", "trader", "direction", "pnl", "coin", "quantity", "state", "is_ever_updated")
 
+    actions = ['close_position']
+
+    def close_position(self, request, queryset):
+        for position in queryset:
+            position: Position
+            position.close_position()
+
 
 @admin.register(SLTPOrder)
 class SLTPOrderAdmin(admin.ModelAdmin):
