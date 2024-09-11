@@ -9,10 +9,12 @@ import traceback
 class LongView(APIView):
 
     def post(self, request):
+        just_close = self.request.data.get('just_close')
         traders = Trader.objects.all()
         for trader in traders:
             try:
-                get_long_sign_task.apply_async(kwargs={"trader_id": trader.id}, soft_time_limit=30, time_limit=34)
+                get_long_sign_task.apply_async(kwargs={"trader_id": trader.id,
+                                                       "just_close": just_close}, soft_time_limit=30, time_limit=34)
             except Exception as e:
                 print(e.__str__() + "\n" + str(traceback.format_exc()))
                 print(f'trader.name: {trader.name}')
@@ -23,10 +25,12 @@ class LongView(APIView):
 class ShortView(APIView):
 
     def post(self, request):
+        just_close = self.request.data.get('just_close')
         traders = Trader.objects.all()
         for trader in traders:
             try:
-                get_short_sign_task.apply_async(kwargs={"trader_id": trader.id}, soft_time_limit=20, time_limit=22)
+                get_short_sign_task.apply_async(kwargs={"trader_id": trader.id,
+                                                        "just_close": just_close}, soft_time_limit=20, time_limit=22)
             except Exception as e:
                 print(e.__str__() + "\n" + str(traceback.format_exc()))
 

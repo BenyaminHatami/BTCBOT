@@ -37,21 +37,23 @@ def change_sl_with_price(position_id: int):
 
 
 @shared_task
-def get_long_sign_task(trader_id: int):
+def get_long_sign_task(trader_id: int, just_close: str):
     from Logic.models import Trader
     trader = Trader.objects.get(id=trader_id)
     try:
-        trader.get_long_sign()
+        just_close = True if just_close == "True" else False
+        trader.get_long_sign(just_close=just_close)
     except Exception as ve:
         print(ve.__str__() + "\n" + str(traceback.format_exc()))
 
 
 @shared_task
-def get_short_sign_task(trader_id: int):
+def get_short_sign_task(trader_id: int, just_close: str):
     from Logic.models import Trader
     trader = Trader.objects.get(id=trader_id)
     try:
-        trader.get_short_sign()
+        just_close = True if just_close == "True" else False
+        trader.get_short_sign(just_close=just_close)
     except Exception as ve:
         print(ve.__str__() + "\n" + str(traceback.format_exc()))
 

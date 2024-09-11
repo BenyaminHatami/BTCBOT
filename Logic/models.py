@@ -393,6 +393,23 @@ class Trader(BaseModel):
                                                      plan_type=PlanType.tp.value)
         monitoring_sltp_orders.apply_async(args=[position.id])
 
+    def _create_first_time_go_long_v2(self):
+        position = Position.create_new_position(trader=self, coin=Coin.btc_futures.value,
+                                                quantity=Decimal("0.003"), side=SideFutures.open_long.value)
+        position_action = position.positionaction_set.last()
+        sl_price = position_action.price * Decimal("0.995")
+        tp_price = position_action.price * Decimal("1.005")
+
+        sl_order = SLTPOrder.create_new_sltp_order(trader=self, position=position, coin=Coin.btc_futures.value,
+                                                   trigger_price=sl_price, quantity=position.quantity,
+                                                   plan_type=PlanType.sl.value)
+        tp_order = SLTPOrder.create_new_sltp_order(trader=self, position=position, coin=Coin.btc_futures.value,
+                                                   trigger_price=tp_price,
+                                                   quantity=position.quantity,
+                                                   plan_type=PlanType.tp.value)
+
+        monitoring_sltp_orders.apply_async(args=[position.id])
+
     def _calculate_second_time_price(self, position, position_previous_quantity):
         position_actions = position.positionaction_set
         return (position_previous_quantity * position_actions.first().price +
@@ -455,6 +472,23 @@ class Trader(BaseModel):
         monitoring_sltp_orders.apply_async(args=[position.id])
         # check_position_one_hour_later.apply_async(args=[position.id])
 
+    def _create_first_time_go_short_v2(self):
+        position = Position.create_new_position(trader=self, coin=Coin.btc_futures.value,
+                                                quantity=Decimal("0.003"), side=SideFutures.open_short.value)
+        position_action = position.positionaction_set.last()
+        sl_price = position_action.price * Decimal("1.005")
+        tp_price = position_action.price * Decimal("0.995")
+
+        sl_order = SLTPOrder.create_new_sltp_order(trader=self, position=position, coin=Coin.btc_futures.value,
+                                                   trigger_price=sl_price, quantity=position.quantity,
+                                                   plan_type=PlanType.sl.value)
+        tp_order = SLTPOrder.create_new_sltp_order(trader=self, position=position, coin=Coin.btc_futures.value,
+                                                   trigger_price=tp_price,
+                                                   quantity=position.quantity,
+                                                   plan_type=PlanType.tp.value)
+
+        monitoring_sltp_orders.apply_async(args=[position.id])
+
     def _create_second_time_go_short(self, position):
         write_at_cache(position.id, "changing", f"second_time_go_long for {self.name}")
         position_previous_quantity = position.quantity
@@ -484,47 +518,59 @@ class Trader(BaseModel):
                                                          plan_type=PlanType.tp.value)
         write_at_cache(position.id, "finished", f"second_time_go_long finished for {self.name}")
 
-    def get_long_sign(self):
+    def get_long_sign(self, just_close: bool):
         active_positions = self.position_set.filter(state=State.Active.value)
         number = active_positions.count()
         print(f"number of active_positions: {number}")
         if number > 1:
             raise Exception(f"Not suitable number of active positions: {number}!")
+        # elif number == 1:
+        #     position = active_positions.last()
+        #     if position.direction == PositionDirection.short.value:
+        #         position.close_position()
+        #         self._create_first_time_go_long()
+        #     elif position.direction == PositionDirection.long.value:
+        #         with transaction.atomic():
+        #             position = Position.objects.filter(id=position.id).select_for_update().get()
+        #             if position.number_of_openings >= 2:
+        #                 return
+        #             else:
+        #                 self._create_second_time_go_long(position=position)
         elif number == 1:
             position = active_positions.last()
             if position.direction == PositionDirection.short.value:
                 position.close_position()
-                self._create_first_time_go_long()
-            elif position.direction == PositionDirection.long.value:
-                with transaction.atomic():
-                    position = Position.objects.filter(id=position.id).select_for_update().get()
-                    if position.number_of_openings >= 2:
-                        return
-                    else:
-                        self._create_second_time_go_long(position=position)
-        else:
-            self._create_first_time_go_long()
+                if just_close is False:
+                    self._create_first_time_go_long_v2()
+        elif number == 0:
+            self._create_first_time_go_long_v2()
 
-    def get_short_sign(self):
+    def get_short_sign(self, just_close: bool):
         active_positions = self.position_set.filter(state=State.Active.value)
         number = active_positions.count()
         print(f"number of active_positions: {number}")
         if number > 1:
             raise Exception(f"Not suitable number of active positions: {number}!")
+        # elif number == 1:
+        #     position = active_positions.last()
+        #     if position.direction == PositionDirection.long.value:
+        #         position.close_position()
+        #         self._create_first_time_go_short()
+        #     elif position.direction == PositionDirection.short.value:
+        #         with transaction.atomic():
+        #             position = Position.objects.filter(id=position.id).select_for_update().get()
+        #             if position.number_of_openings >= 2:
+        #                 return
+        #             else:
+        #                 self._create_second_time_go_short(position=position)
         elif number == 1:
             position = active_positions.last()
             if position.direction == PositionDirection.long.value:
                 position.close_position()
-                self._create_first_time_go_short()
-            elif position.direction == PositionDirection.short.value:
-                with transaction.atomic():
-                    position = Position.objects.filter(id=position.id).select_for_update().get()
-                    if position.number_of_openings >= 2:
-                        return
-                    else:
-                        self._create_second_time_go_short(position=position)
-        else:
-            self._create_first_time_go_short()
+                if just_close is False:
+                    self._create_first_time_go_short_v2()
+        elif number == 0:
+            self._create_first_time_go_short_v2()
 
 
 class Position(BaseModel):
