@@ -7,8 +7,6 @@ from celery import shared_task
 from django.core.cache import cache
 import time
 
-from Logic.models import Trader, PositionDirection
-
 
 # @shared_task
 # def inquiry_task():
@@ -61,6 +59,7 @@ def get_short_sign_task(trader_id: int, just_close: str):
 
 
 def change_sl_if_need(position, open_price, sl_order):
+    from Logic.models import PositionDirection
     need = False
     now_price = position.trader.get_price()
     if position.direction == PositionDirection.long.value:
