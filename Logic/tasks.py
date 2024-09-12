@@ -7,6 +7,8 @@ from celery import shared_task
 from django.core.cache import cache
 import time
 
+from Logic.models import Trader, PositionDirection
+
 
 # @shared_task
 # def inquiry_task():
@@ -58,9 +60,26 @@ def get_short_sign_task(trader_id: int, just_close: str):
         print(ve.__str__() + "\n" + str(traceback.format_exc()))
 
 
+def change_sl_if_need(position, open_price, sl_order):
+    need = False
+    now_price = position.trader.get_price()
+    if position.direction == PositionDirection.long.value:
+        if now_price > open_price * Decimal("1.0038"):
+            need = True
+    else:
+        if now_price < open_price * Decimal("0.9962"):
+            need = True
+
+    if need is True:
+        sl_order.change_trigger_price(new_trigger_price=open_price)
+        return True
+    return False
+
+
 @shared_task
 def monitoring_sltp_orders(position_id: int):
     from Logic.models import Position, State, PlanType, PositionDirection
+    changed_sl = False
     while True:
         print("STARTED TASK")
         position = Position.objects.get(id=position_id)
@@ -71,6 +90,10 @@ def monitoring_sltp_orders(position_id: int):
         sls = active_sltp_orders.filter(plan_type=PlanType.sl.value)
         assert len(sls) == 1
         sl = sls.last()
+
+        if changed_sl is False:
+            changed_sl = change_sl_if_need(position=position, open_price=sl.price, sl_order=sl)
+
         inactivated = sl.get_information()
         if inactivated:
             position.inactivate_all_sltp_orders()
