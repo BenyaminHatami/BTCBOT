@@ -90,9 +90,6 @@ def monitoring_sltp_orders(position_id: int):
         assert len(sls) == 1
         sl = sls.last()
 
-        if changed_sl is False:
-            changed_sl = change_sl_if_need(position=position, open_price=sl.price, sl_order=sl)
-
         inactivated = sl.get_information()
         if inactivated:
             position.inactivate_all_sltp_orders()
@@ -101,6 +98,9 @@ def monitoring_sltp_orders(position_id: int):
             position.add_comment(f"Quantity decreased duo to stop loss with quantity: {sl.quantity}")
             position.save(update_fields=["state", "quantity", "updated"])
             return
+
+        if changed_sl is False:
+            changed_sl = change_sl_if_need(position=position, open_price=sl.price, sl_order=sl)
 
         if position.direction == PositionDirection.long.value:
             sorted_tps = active_sltp_orders.filter(plan_type=PlanType.tp.value).order_by('trigger_price')
