@@ -100,7 +100,7 @@ def monitoring_sltp_orders(position_id: int):
             return
 
         if changed_sl is False:
-            changed_sl = change_sl_if_need(position=position, open_price=sl.price, sl_order=sl)
+            changed_sl = change_sl_if_need(position=position, open_price=price, sl_order=sl)
 
         if position.direction == PositionDirection.long.value:
             sorted_tps = active_sltp_orders.filter(plan_type=PlanType.tp.value).order_by('trigger_price')
