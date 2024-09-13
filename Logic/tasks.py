@@ -63,7 +63,7 @@ def change_sl_if_need(position, open_price, sl_order):
     need = False
     now_price = position.trader.get_price(coin=Coin.btc_futures.value)
     if position.direction == PositionDirection.long.value:
-        if now_price > open_price * Decimal("1.0038"):
+        if now_price > open_price * Decimal("1.0001"):
             need = True
     else:
         if now_price < open_price * Decimal("0.9962"):
