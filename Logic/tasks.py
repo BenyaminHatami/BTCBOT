@@ -62,6 +62,9 @@ def change_sl_if_need(position, open_price, sl_order):
     from Logic.models import PositionDirection, Coin
     need = False
     now_price = position.trader.get_price(coin=Coin.btc_futures.value)
+    print(f"OPEN PRICE IS {open_price}")
+    print(f"NOW PRICE IS {now_price}")
+    print(f"LIMIT PRICE IS {open_price * Decimal("1.0001")}")
     if position.direction == PositionDirection.long.value:
         if now_price > open_price * Decimal("1.0001"):
             need = True
