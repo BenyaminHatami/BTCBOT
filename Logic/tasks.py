@@ -102,7 +102,7 @@ def monitoring_sltp_orders(position_id: int):
             position.save(update_fields=["state", "quantity", "updated"])
             return
 
-        if changed_sl is False:
+        if not changed_sl:
             changed_sl = change_sl_if_need(position=position, open_price=price, sl_order=sl)
 
         if position.direction == PositionDirection.long.value:
