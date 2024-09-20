@@ -64,13 +64,15 @@ def change_sl_if_need(position, open_price, sl_order):
     now_price = position.trader.get_price(coin=Coin.btc_futures.value)
     if position.direction == PositionDirection.long.value:
         if now_price > open_price * Decimal("1.0038"):
+            new_price = open_price * Decimal("1.0025")
             need = True
     else:
         if now_price < open_price * Decimal("0.9962"):
+            new_price = open_price * Decimal("0.9975")
             need = True
 
     if need is True:
-        sl_order.change_trigger_price(new_trigger_price=open_price)
+        sl_order.change_trigger_price(new_trigger_price=new_price)
         return True
     return False
 
